@@ -8,11 +8,13 @@
 
     <!-- CSS-->
      <link rel="stylesheet" href="styles/index.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
     <header>
-
+        <!-- start of header-->
         <div class="header-area header-transparrent">
             <div class="header-top header-fixed">
                 <div class="container">
@@ -23,49 +25,69 @@
                         <div class="menu-wrapper">
                             <!-- Main menu with drop down navigation bar will be here, same on every page-->
                              <div class ="menu-main">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="#">Services</a>
-                                            <ul class ="submenu">
-                                                <li><a href =""> Item 1</a></li>
-                                                <li><a href =""> Item 2</a></li>
-                                                <li><a href =""> Item 3</a></li>
-                                                <li><a href =""> Item 4</a></li>
-                                                <li><a href =""> Item 5</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="" >Another item </a></li>
-                                        <li><a href="#" >Another item1 </a>
-                                            <ul class ="submenu">
-                                                <li><a href =""> Item 1</a></li>
-                                                <li><a href =""> Item 2</a></li>
-                                                <li><a href =""> Item 3</a></li>
-                                            </ul>   
-                                        </li>
-                                        <li><A href=""> Another item2</A></li>
-                                        <li><A href=""> Another item3</A></li>
-                                    </ul>
-                                </nav>
+                                <div class ="menu-button" id="menuButton">
+                                    <i class="fas fa-bars"></i>  <!-- stack icon, in sources-->
+                                </div>
+                                    <nav id = "dropdownMenu" class = "dropdown-menu">
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="#" class ="submenu-toggle">Services <i class ="fas fa-plus"></i> <!--used for the plus icon-->
+                                            </a>
+                                                <ul class ="submenu">
+                                                    <li><a href =""> Item 1</a></li>
+                                                    <li><a href =""> Item 2</a></li>
+                                                    <li><a href =""> Item 3</a></li>
+                                                    <li><a href =""> Item 4</a></li>
+                                                    <li><a href =""> Item 5</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" >Another item </a></li>
+                                            <li>
+                                                <a href="#" >Another item1<i class="fas fa-plus"></i> </a> <!--used for the plus icon-->
+                                                <ul class ="submenu">
+                                                    <li><a href =""> Item 1</a></li>
+                                                    <li><a href =""> Item 2</a></li>
+                                                    <li><a href =""> Item 3</a></li>
+                                                </ul>   
+                                            </li>
+                                            <li><A href=""> Another item2</A></li>
+                                            <li><A href=""> Another item3</A></li>
+                                        </ul>
+                                    </nav>
                              </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-     
-
-
-
-
+        <!-- end of header-->
     </header>
+
+
+
+
+
+
+
+
+
+</style>
+
+    <!-- JS here-->
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuButton.addEventListener('click',function(){
+            dropdownMenu.classList.toggle('active');
+        })
+
+        const submenuToggle = document.querySelectorAll(".submenu-toggle");
+
+        
+
+    </script>
 
 </body>
 </html>
