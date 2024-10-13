@@ -1,0 +1,42 @@
+.menu-wrapper{
+    position: relative;
+}
+.menu-button{
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;
+    font-size: 40px;
+    color: red;
+}
+.dropdown-menu{
+    display: none;
+    position:absolute;
+    background: black ;
+    z-index:1000;
+    left:40%;
+}
+.dropdown-menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-menu ul li{
+    padding: 10px 20px;
+}
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+.dropdown-menu.active{
+    display:block;
+}
+
+.submenu{
+    display: none;
+}
+
+.submenu.active{
+    display:block;
+    
+}
