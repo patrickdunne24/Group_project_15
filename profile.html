@@ -22,12 +22,14 @@
                         <div class="company-logo">
                             <a href="index.html"><img src= "images/logo.png" alt ="" style = "width: 140px"></a>
                         </div>
+                        <br>
                         <div class="menu-wrapper">
                             <!-- Main menu with drop down navigation bar will be here, same on every page-->
                              <div class ="menu-main">
                                 <div class ="menu-button" id="menuButton">
                                 <!--  <i class="fas fa-bars"></i>   stack icon, in sources-->
                                 </div>
+                                <br>
                                 <div class="dropdown">
                                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                                       Dropdown button
@@ -45,28 +47,39 @@
     <br>
     <!-- welcome area and profile pic  -->
     <h1 class="text-center">Welcome to your profile!</h1>
-    <img src="images/profilePic.png" alt="Temp Profile Pic" class="mx-auto d-block" width="242" height="236">
+    <img src="images/profilePic.png" alt="Temp Profile Pic" class="mx-auto d-block rounded-3" width="242" height="236">
     <p class="text-center">Username Here</p>
     <br>
     <br>
     <!-- scroll box and container to display courses -->
-    <div class="my-courses">
-        <p class="text-start fw-bold">My Courses</p>
-        <div class="container2 p-3 my-3 col-6 bg-light text-dark">
-            <div class="overflow-scroll" style="max-width: 620px; max-height: 180px;">
-                <h3>This is where the courses are going to be stored</h3>
-                <br>
-                <p>Example Course 1</p>
-                <p>Example Course 2</p>
-                <p>Example Course 3</p>
-                <p>Example Course 4</p>
-                <p>Example Course 5</p>
-                <p>Example Course 6</p>
-                <p>Example Course 7</p>
-                <p>Example Course 8</p>
-                <p>Example Course 9</p>
-                <p>Example Course 10</p>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="container2 p-3 my-3 col-5 bg-light text-dark spacing rounded-3">
+                <p class="text-start fw-bold">My Courses</p>
+                <div class="overflow-scroll" style="max-width: 620px; max-height: 180px;">
+                    <h3>This is where the courses are going to be stored</h3>
+                    <br>
+                    <p>Example Course 1</p>
+                    <p>Example Course 2</p>
+                    <p>Example Course 3</p>
+                    <p>Example Course 4</p>
+                    <p>Example Course 5</p>
+                    <p>Example Course 6</p>
+                    <p>Example Course 7</p>
+                    <p>Example Course 8</p>
+                    <p>Example Course 9</p>
+                    <p>Example Course 10</p>
+                </div>
             </div>
+
+            <div class="container2 p-3 my-3 col-5 bg-light text-dark spacing rounded-3" style="max-width: 620px; max-height: 310px">
+                <h3>User Info</h3>
+                <br>
+                <p>First Name: John</p>
+                <p>Surname: Smith</p>
+                <p>Account Type: Learner</p>
+                <p>Account Created: 01/01/2024</p>
+             </div>
         </div>
     </div>  
 </body>
