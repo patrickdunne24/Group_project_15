@@ -1,3 +1,5 @@
+/*header styling */
+
 .header-area {
     position: fixed;
     top: 0;
@@ -7,9 +9,33 @@
     padding: 15px 0; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
-
-
 .main-content {
     padding-top: 150px; 
 }
 
+/* banner styling*/
+    .scrolling-banner {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        max-height: 310px; 
+        background-color: #f8f9fa; 
+    }
+    .scrolling-banner img {
+        height: 100%;
+        flex-shrink: 0;
+        width: auto;
+        margin-right: 0px
+    }
+
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .scrolling-banner-inner {
+        display: flex;
+        animation: scroll 100s linear infinite;
+        min-width: 600%;
+    }
