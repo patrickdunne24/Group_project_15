@@ -3,64 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Community Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for better organization -->
 </head>
 <body>
-
-    <header></header>
-        <!-- start of header-->
+    <!-- start of header -->
+    <header>
         <div class="header-area header-transparrent">
             <div class="header-top header-fixed">
                 <div class="container">
-                    <div class ="row align-items-center">
+                    <div class="row align-items-center">
                         <div class="company-logo">
-                            <a href="index.html"><img src= "images/logo.png" alt ="" style = "width: 140px"></a>
+                            <a href="index.html"><img src="images/logo.png" alt="" style="width: 140px"></a>
                         </div>
                         <div class="menu-wrapper">
-                            <!-- Main menu with drop down navigation bar will be here, same on every page-->
-                             <div class ="menu-main">
-                                <div class ="menu-button" id="menuButton">
-                                <!--  <i class="fas fa-bars"></i>   stack icon, in sources-->
+                            <div class="menu-main">
+                                <div class="menu-button" id="menuButton">
+                                    <!-- Menu icon here if needed -->
                                 </div>
-                                    <nav id = "dropdownMenu" class = "dropdown-menu">
-                                        <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <!--<li><a href="#" class ="submenu-toggle">Services <i class ="fas fa-plus"></i> used for the plus icon--> 
-                                            </a>
-                                        </li>
-                                        <li><A href="courses.html">Courses</A></li>
-                                        <li><A href="community.html">Community</A></li>
-                                        <li><A href="profile.html">Profile</A></li>
-                                                <ul class ="submenu">
-                                                    <li><a href =""> Item 1</a></li>
-                                                    <li><a href =""> Item 2</a></li>
-                                                    <li><a href =""> Item 3</a></li>
-                                                    <li><a href =""> Item 4</a></li>
-                                                    <li><a href =""> Item 5</a></li>
-                                                </ul>
-                                            
-                                            <li><a href="" >Another item </a></li>
-                                            <li>
-                                               <!-- <a href="#" >Another item1<i class="fas fa-plus"></i> </a> used for the plus icon -->
-                                                <ul class ="submenu">
-                                                    <li><a href =""> Item 1</a></li>
-                                                    <li><a href =""> Item 2</a></li>
-                                                    <li><a href =""> Item 3</a></li>
-                                                </ul>   
-                                            </li>
-                                            <li><A href=""> Another item2</A></li>
-                                            <li><A href=""> Another item3</A></li>
-                                        </ul>
-                                    </nav>
-                             </div>
+                                <nav id="dropdownMenu" class="dropdown-menu">
+                                    <ul id="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="courses.html">Courses</a></li>
+                                        <li><a href="community.html">Community</a></li>
+                                        <li><a href="profile.html">Profile</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end of header-->
     </header>
-    <h1>Community</h1>
+    <!-- end of header -->
+
+    <main>
+        <h1>Community</h1>
+
+        <!-- Announcements Section -->
+        <section class="announcements">
+            <h2>Latest Announcements</h2>
+            <ul>
+                <li>🎉 New Tutors Onboarded! Welcome them in the community.</li>
+                <li>📅 Upcoming Workshop: Learn Python for Beginners - Register Now!</li>
+                <li>⭐ Tutor of the Month: Check out our top-rated tutor's profile!</li>
+            </ul>
+        </section>
+
+        <!-- Discussion Forums Section -->
+        <section class="forums">
+            <h2>Discussion Forums</h2>
+            <p>Explore topics or ask questions:</p>
+            <ul>
+                <li><a href="#">General Q&A</a></li>
+                <li><a href="#">Programming Tips</a></li>
+                <li><a href="#">Design & Creativity</a></li>
+                <li><a href="#">Cooking & Culinary Skills</a></li>
+            </ul>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="success-stories">
+            <h2>Success Stories</h2>
+            <p>Hear from other learners:</p>
+            <div class="story">
+                <p>"I learned Python in just two months with amazing help from my tutor!" - <strong>Student A</strong></p>
+            </div>
+            <div class="story">
+                <p>"Cooking has never been easier. Highly recommend the Italian Cuisine course!" - <strong>Student B</strong></p>
+            </div>
+        </section>
+
+        <!-- Community Guidelines Section -->
+        <section class="guidelines">
+            <h2>Community Guidelines</h2>
+            <p>Please ensure respectful and constructive participation:</p>
+            <ul>
+                <li>Be supportive and respectful of others' learning journeys.</li>
+                <li>Avoid spamming or promoting external links.</li>
+                <li>Follow all site rules and report inappropriate content.</li>
+            </ul>
+        </section>
+    </main>
 
 </body>
 </html>
