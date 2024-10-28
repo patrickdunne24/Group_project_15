@@ -40,7 +40,7 @@
     .scrolling-banner-inner {
         display: flex;
         animation: scroll 100s linear infinite;
-        min-width: 600%;
+        min-width: 800%;
     }
 
 .social-icons {
