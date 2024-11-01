@@ -6,3 +6,11 @@
 .title{
     font-style: bold;
 }
+
+.form-group{
+    padding-bottom: 10px;
+}
+
+.signup-button{
+    position: center;
+}
