@@ -69,6 +69,21 @@
     font-weight: 600;
     margin: 0;
 }
+.category-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.category-link:hover .category-card {
+    background-color: #292929;
+    transform: scale(1.05);
+}
+
 
 /* star icon for favourites*/
 
