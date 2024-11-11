@@ -1,7 +1,9 @@
 html body {
     background-color: #DAF5FE;
 }
-
+.custom-gap {
+    margin-right: 5px; 
+}
 .spacing {
     margin-right: 10px;
 }

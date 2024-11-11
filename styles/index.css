@@ -9,6 +9,9 @@
     padding: 15px 0; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
+.custom-gap {
+    margin-right: 5px; 
+}
 .main-content {
     padding-top: 150px;
     font-family: "Roboto", sans-serif; 

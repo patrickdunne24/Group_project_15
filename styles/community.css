@@ -12,3 +12,6 @@
 .social-icon:hover i {
     color: blue;
 }
+.custom-gap {
+    margin-right: 5px; 
+}

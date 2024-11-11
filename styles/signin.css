@@ -1,6 +1,9 @@
 html body {
     background-color: #DAF5FE;
 }
+.custom-gap {
+    margin-right: 5px; 
+}
 
 .main-content {
     font-family: "Roboto", sans-serif; 

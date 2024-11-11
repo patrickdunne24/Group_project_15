@@ -2,6 +2,9 @@
 
     padding-top: 150;
 }
+.custom-gap {
+    margin-right: 5px; 
+}
 
 .title{
     font-style: bold;
