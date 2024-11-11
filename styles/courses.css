@@ -53,13 +53,25 @@
 }
 
 .category-card {
+    position: relative;
     background-color: #1c1c1c;
     border-radius: 8px;
     padding: 20px;
     color: #ffffff;
-    text-align: center;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 90%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+}
+.text-container {
+    text-align: center;
+    padding: 10px 0; /* Adds spacing above and below the title */
+    flex-grow: 1; /* Ensures this takes up available space if needed */
 }
 
 .category-card:hover {
@@ -98,16 +110,6 @@
 
 /* star icon for favourites*/
 
-.category-card {
-    position: relative;
-    background-color: #1c1c1c;
-    border-radius: 8px;
-    padding: 20px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 .favorite-star {
     position: absolute;
