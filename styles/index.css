@@ -35,6 +35,14 @@
     margin-right: 0px
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 90%; /* Adjust width as desired for larger screens */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 
 @keyframes scroll {
     0% { transform: translateX(0); }
