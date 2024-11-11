@@ -12,6 +12,10 @@
 .custom-gap {
     margin-right: 5px; 
 }
+.search-bar {
+    width: 300px; 
+}
+
 .main-content {
     padding-top: 150px;
     font-family: "Roboto", sans-serif; 

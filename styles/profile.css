@@ -7,6 +7,9 @@ html body {
 .spacing {
     margin-right: 10px;
 }
+.search-bar {
+    width: 300px; 
+}
 
 .social-icons {
     display: flex;
