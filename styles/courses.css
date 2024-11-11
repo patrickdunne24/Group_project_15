@@ -69,3 +69,34 @@
     font-weight: 600;
     margin: 0;
 }
+
+/* star icon for favourites*/
+
+.category-card {
+    position: relative;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-star {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; 
+    font-size: 1.5rem;
+    color: #d3d3d3; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.favorite-star.favorited {
+    color: #ffd700; 
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
