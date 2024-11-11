@@ -23,6 +23,7 @@
                     <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
+                <div id="google_translate_element" class="translate-element ms-3"></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,7 +47,6 @@
 
     <div class="container main-content">
         <h2 class="section-title text-center mt-5">Business & Finance Courses</h2>
-    
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
@@ -54,148 +54,225 @@
                         <img src="../images/imagesForCourses/business_page/intro_financial_markets.webp" alt="Introduction to Financial Markets" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-success">New</span>
+                            <span class="badge bg-primary">Beginner</span>
                             <h3 class="category-title">Introduction to Financial Markets</h3>
                             <p class="course-info">400 students &bull; 2h 15m</p>
-                            <p class="course-instructor">Sarah Brown</p>
+                            <p class="course-instructor">Tutor: Sarah Brown</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/personal_finance.webp" alt="Personal Finance Management" class="category-image">
                         <div class="text-container">
+                            <span class="badge bg-warning">Popular</span>
+                            <span class="badge bg-primary">Beginner</span>
                             <h3 class="category-title">Personal Finance Management</h3>
                             <p class="course-info">650 students &bull; 3h 10m</p>
-                            <p class="course-instructor">James Patel</p>
+                            <p class="course-instructor">Tutor: James Patel</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/data_analysis.webp" alt="Data Analysis for Business Decisions" class="category-image">
                         <div class="text-container">
+                            <span class="badge bg-danger">Advanced</span>
                             <h3 class="category-title">Data Analysis for Business Decisions</h3>
                             <p class="course-info">890 students &bull; 4h 30m</p>
-                            <p class="course-instructor">Emily Chen</p>
+                            <p class="course-instructor">Tutor: Emily Chen</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/corporate_finance.webp" alt="Corporate Finance Essentials" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-info">Staff Pick</span>
+                            <span class="badge bg-danger">Advanced</span>
                             <h3 class="category-title">Corporate Finance Essentials</h3>
                             <p class="course-info">1,200 students &bull; 5h 45m</p>
-                            <p class="course-instructor">David Lee</p>
+                            <p class="course-instructor">Tutor: David Lee</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/accounting_basics.webp" alt="Small Business Accounting Basics" class="category-image">
                         <div class="text-container">
+                            <span class="badge bg-primary">Beginner</span>
                             <h3 class="category-title">Accounting Basics</h3>
                             <p class="course-info">300 students &bull; 2h 0m</p>
-                            <p class="course-instructor">Laura Green</p>
+                            <p class="course-instructor">Tutor: Laura Green</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/investment_strategies.webp" alt="Investment Strategies for Beginners" class="category-image">
                         <div class="text-container">
+                            <span class="badge bg-primary">Beginner</span>
                             <h3 class="category-title">Investment Strategies for Beginners</h3>
                             <p class="course-info">500 students &bull; 3h 20m</p>
-                            <p class="course-instructor">Mark Thompson</p>
+                            <p class="course-instructor">Tutor: Mark Thompson</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/digital_marketing.webp" alt="Digital Marketing for Finance Professionals" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-success">New</span>
+                            <span class="badge bg-primary">Intermediate</span>
                             <h3 class="category-title">Digital Marketing for Finance Professionals</h3>
                             <p class="course-info">280 students &bull; 2h 45m</p>
-                            <p class="course-instructor">Anna Martin</p>
+                            <p class="course-instructor">Tutor: Anna Martin</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/global_economics.webp" alt="Global Economics and Trade" class="category-image">
                         <div class="text-container">
+                            <span class="badge bg-warning">Popular</span>
+                            <span class="badge bg-primary">Intermediate</span>
                             <h3 class="category-title">Global Economics and Trade</h3>
                             <p class="course-info">600 students &bull; 3h 50m</p>
-                            <p class="course-instructor">Mohammed Ali</p>
+                            <p class="course-instructor">Tutor: Mohammed Ali</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
-
+    
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/business_page/entrepreneurship.webp" alt="Entrepreneurship and Business Planning" class="category-image">
                         <div class="text-container">
+                            <span class="badge bg-warning">Popular</span>
+                            <span class="badge bg-primary">Intermediate</span>
                             <h3 class="category-title">Entrepreneurship and Business Planning</h3>
                             <p class="course-info">850 students &bull; 4h 5m</p>
-                            <p class="course-instructor">Rachel Ford</p>
+                            <p class="course-instructor">Tutor: Rachel Ford</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
         </div>
     </div>
+    
+    <div class="container text-center mt-5">
+        <h2>Advance Your Business & Financial Knowledge</h2>
+        <div class="text-content mx-auto" style="max-width: 700px;">
+            <p>
+                Step into the world of business and finance with courses that equip you for success. Tutord’s business and finance classes cover a range of essential topics, from financial markets and investment strategies to personal finance and digital marketing. Whether you’re a budding entrepreneur, a finance professional, or simply looking to manage your own finances more effectively, these classes will empower you with the skills and insights to make informed decisions and drive growth. Discover the tools, techniques, and strategies that can shape your career, and take a step closer to your financial and business goals with Tutord.
+            </p>
+        </div>
+    </div>
+    
+
 
     <!--Footer -->
     <footer class="bg-light text-center py-3">

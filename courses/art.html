@@ -23,6 +23,7 @@
                     <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
+                <div id="google_translate_element" class="translate-element ms-3"></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -47,7 +48,6 @@
 
     <div class="container main-content">
         <h2 class="section-title text-center mt-5">Art & Design Courses</h2>
-    
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
@@ -55,121 +55,164 @@
                         <img src="../images/imagesForCourses/art_page/digital_art_basics.webp" alt="Digital Art Basics" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-success">New</span>
+                            <span class="badge bg-primary">Beginner</span> 
                             <h3 class="category-title">Digital Art Basics</h3>
                             <p class="course-info">500 students &bull; 2h 30m</p>
-                            <p class="course-instructor">Alex Turner</p>
+                            <p class="course-instructor">Tutor: Alex Turner</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
     
-           
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/art_page/typography_tips.webp" alt="Typography Tips in Adobe Illustrator" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-success">New</span>
+                            <span class="badge bg-primary">Intermediate</span> 
                             <h3 class="category-title">Typography Tips in Adobe Illustrator</h3>
                             <p class="course-info">107 students &bull; 1h 1m</p>
-                            <p class="course-instructor">Melissa Lee</p>
+                            <p class="course-instructor">Tutor: Melissa Lee</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
     
-           
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/art_page/branding_concepts.webp" alt="Crafting Brand Concepts" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-info">Staff Pick</span>
+                            <span class="badge bg-primary">Beginner</span> 
                             <h3 class="category-title">Crafting Brand Concepts</h3>
                             <p class="course-info">215 students &bull; 1h 6m</p>
-                            <p class="course-instructor">Emma Clarke</p>
+                            <p class="course-instructor">Tutor: Emma Clarke</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
     
-           
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/art_page/graphic_design.webp" alt="Introduction to Graphic Design" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-warning">Popular</span>
+                            <span class="badge bg-danger">Advanced</span> 
                             <h3 class="category-title">Introduction to Graphic Design</h3>
                             <p class="course-info">1,200 students &bull; 3h 20m</p>
-                            <p class="course-instructor">Sophia Green</p>
+                            <p class="course-instructor">Tutor: Sophia Green</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
     
-           
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/art_page/creative_photography.webp" alt="Creative Photography Techniques" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-success">New</span>
+                            <span class="badge bg-primary">Beginner</span> 
                             <h3 class="category-title">Creative Photography Techniques</h3>
                             <p class="course-info">650 students &bull; 2h 10m</p>
-                            <p class="course-instructor">Michael White</p>
+                            <p class="course-instructor">Tutor: Michael White</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
     
-         
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/art_page/ui_ux_design.webp" alt="UI/UX Design Principles" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-info">Staff Pick</span>
+                            <span class="badge bg-warning">Intermediate</span> 
                             <h3 class="category-title">UI/UX Design Principles</h3>
                             <p class="course-info">2,500 students &bull; 4h 15m</p>
-                            <p class="course-instructor">Jessica Tan</p>
+                            <p class="course-instructor">Tutor: Jessica Tan</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
     
-       
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <a href="#" class="category-link">
                     <div class="category-card">
                         <img src="../images/imagesForCourses/art_page/illustration_techniques.webp" alt="Illustration Techniques for Beginners" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-warning">Popular</span>
+                            <span class="badge bg-primary">Beginner</span> 
                             <h3 class="category-title">Illustration Techniques for Beginners</h3>
                             <p class="course-info">900 students &bull; 1h 45m</p>
-                            <p class="course-instructor">Chris Lee</p>
+                            <p class="course-instructor">Tutor: Chris Lee</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
@@ -180,13 +223,20 @@
                         <img src="../images/imagesForCourses/art_page/video_editing_basics.webp" alt="Video Editing Basics" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-success">New</span>
+                            <span class="badge bg-primary">Beginner</span> 
                             <h3 class="category-title">Video Editing Basics</h3>
                             <p class="course-info">320 students &bull; 2h 5m</p>
-                            <p class="course-instructor">Emily Stone</p>
+                            <p class="course-instructor">Tutor: Emily Stone</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
@@ -197,23 +247,35 @@
                         <img src="../images/imagesForCourses/art_page/music_production_basics.webp" alt="Music Production Basics" class="category-image">
                         <div class="text-container">
                             <span class="badge bg-secondary">Original</span>
+                            <span class="badge bg-primary">Intermediate</span> 
                             <h3 class="category-title">Music Production Basics</h3>
                             <p class="course-info">1,500 students &bull; 3h 30m</p>
-                            <p class="course-instructor">James Oliver</p>
+                            <p class="course-instructor">Tutor: James Oliver</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
                         </div>
-                        <div class="favorite-star">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <div class="favorite-star"><i class="fas fa-star"></i></div>
                     </div>
                 </a>
             </div>
         </div>
     </div>
-    
 
-
-
-
+    <div class="container text-center mt-5">
+        <h2>Unleash Your Creative Potential</h2>
+        <div class="text-content mx-auto" style="max-width: 700px;">
+            <p>
+                Dive into the world of art and design with Tutord’s inspiring courses. From digital illustration and graphic design to photography and video editing, these classes offer something for every creative mind. Whether you’re just starting out or are a seasoned artist, discover new techniques, tools, and ideas that will elevate your skills. Learn to express yourself through digital platforms like Photoshop and Illustrator, or explore traditional mediums like painting and hand lettering. Start creating, gain hands-on experience, and let your artistic vision come to life. There’s no limit to what you can create with Tutord.
+            </p>
+        </div>
+    </div>
+        
 
  <!--Footer -->
  <footer class="bg-light text-center py-3">
