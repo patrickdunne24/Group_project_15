@@ -4,8 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1> languages page</h1>
+
+    <!-- Header Start -->
+<header class="header-area">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/logo.png" alt="Tutord Logo" style="width: 140px;">
+            </a>
+            <form class="d-flex ms-3" role="search">
+                <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+            <div id="google_translate_element" class="translate-element ms-3"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../community.html">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profilePageLearner.html">Learner Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profilePageTutor.html">Tutor Profile</a></li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                    <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Header End -->
+
+<h1>Language Courses Page</h1>
+
+<div class="container main-content">
+    <h2 class="section-title text-center mt-5">Language Courses</h2>
+    <div class="row">
+
+        <!-- Course 1: Introductory Japanese -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/introductory_japanese.webp" alt="Introductory Japanese" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Introductory Japanese</h3>
+                        <p class="course-info">850 students &bull; 2h 30m</p>
+                        <p class="course-instructor">Tutor: Akira Tanaka</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 2: Conversational Spanish -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/conversational_spanish.webp" alt="Conversational Spanish" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Conversational Spanish</h3>
+                        <p class="course-info">700 students &bull; 2h 00m</p>
+                        <p class="course-instructor">Tutor: Maria Lopez</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 3: French for Travelers -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/french_for_travelers.webp" alt="French for Travelers" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-warning">Popular</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">French for Travelers</h3>
+                        <p class="course-info">1,200 students &bull; 2h 45m</p>
+                        <p class="course-instructor">Tutor: Jean Dupont</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 4: Intermediate German Grammar and Writing -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/intermediate_german.webp" alt="Intermediate German Grammar and Writing" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">Intermediate German Grammar and Writing</h3>
+                        <p class="course-info">500 students &bull; 2h 15m</p>
+                        <p class="course-instructor">Tutor: Hans Meier</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 5: Mandarin Chinese: Tones and Pronunciation -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/mandarin_tones.webp" alt="Mandarin Chinese: Tones and Pronunciation" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">Mandarin Chinese: Tones and Pronunciation</h3>
+                        <p class="course-info">1,100 students &bull; 1h 45m</p>
+                        <p class="course-instructor">Tutor: Li Wei</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 6: Arabic Script and Reading -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/arabic_script.webp" alt="Arabic Script and Reading" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Arabic Script and Reading</h3>
+                        <p class="course-info">320 students &bull; 1h 10m</p>
+                        <p class="course-instructor">Tutor: Ahmed Ali</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span>3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 7: Korean for Beginners: Hangeul and Basic Phrases -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/korean_hangeul.webp" alt="Korean for Beginners: Hangeul and Basic Phrases" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-info">Staff Pick</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Korean for Beginners: Hangeul and Basic Phrases</h3>
+                        <p class="course-info">650 students &bull; 1h 30m</p>
+                        <p class="course-instructor">Tutor: Jisoo Park</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 8: Portuguese Culture and Conversation -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/portuguese_culture.webp" alt="Portuguese Culture and Conversation" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-warning">Popular</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">Portuguese Culture and Conversation</h3>
+                        <p class="course-info">900 students &bull; 1h 50m</p>
+                        <p class="course-instructor">Tutor: Joao Silva</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 9: Russian for Intermediate Learners: Vocabulary Expansion -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/languages_page/russian_intermediate.webp" alt="Russian for Intermediate Learners: Vocabulary Expansion" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-secondary">Original</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">Russian for Intermediate Learners: Vocabulary Expansion</h3>
+                        <p class="course-info">450 students &bull; 1h 40m</p>
+                        <p class="course-instructor">Tutor: Ivan Petrov</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3">
+    <p class="mb-0">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-dark">Home</a> | <a href="courses.html" class="text-dark">Courses</a> | <a href="community.html" class="text-dark">Community</a> | <a href="profilePageLearner.html" class="text-dark">Profile</a></p>
+    <div id="google_translate_element"></div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
 </body>
 </html>
