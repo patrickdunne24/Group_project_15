@@ -4,8 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Start -->
+<header class="header-area">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/logo.png" alt="Tutord Logo" style="width: 140px;">
+            </a>
+            <form class="d-flex ms-3" role="search">
+                <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+            <div id="google_translate_element" class="translate-element ms-3"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../community.html">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profilePageLearner.html">Learner Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profilePageTutor.html">Tutor Profile</a></li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                    <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Header End -->
+
+<h1>Health & Fitness Page</h1>
+
+<div class="container main-content">
+    <h2 class="section-title text-center mt-5">Health & Fitness Courses</h2>
+    <div class="row">
+
+        <!-- Course 1: Introduction to Fitness and Wellness -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/introduction_to_fitness.webp" alt="Introduction to Fitness and Wellness" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Introduction to Fitness and Wellness</h3>
+                        <p class="course-info">750 students &bull; 2h 15m</p>
+                        <p class="course-instructor">Tutor: Sarah Jones</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 2: Strength Training for Beginners -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/strength_training_basics.webp" alt="Strength Training for Beginners" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Strength Training for Beginners</h3>
+                        <p class="course-info">600 students &bull; 1h 30m</p>
+                        <p class="course-instructor">Tutor: Mike Johnson</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 3: Yoga and Flexibility Training -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/yoga_flexibility.webp" alt="Yoga and Flexibility Training" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-warning">Popular</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Yoga and Flexibility Training</h3>
+                        <p class="course-info">1,200 students &bull; 2h 45m</p>
+                        <p class="course-instructor">Tutor: Lisa Kim</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 4: Nutrition Essentials for Health and Fitness -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/nutrition_essentials.webp" alt="Nutrition Essentials for Health and Fitness" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">Nutrition Essentials for Health and Fitness</h3>
+                        <p class="course-info">450 students &bull; 1h 45m</p>
+                        <p class="course-instructor">Tutor: Amy Clark</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 5: HIIT (High-Intensity Interval Training) Workouts -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/hiit_workouts.webp" alt="HIIT Workouts" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">HIIT Workouts</h3>
+                        <p class="course-info">1,050 students &bull; 1h 20m</p>
+                        <p class="course-instructor">Tutor: Jordan Lee</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 6: Mindfulness and Meditation for Fitness -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/mindfulness_meditation.webp" alt="Mindfulness and Meditation for Fitness" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Mindfulness and Meditation for Fitness</h3>
+                        <p class="course-info">320 students &bull; 1h 10m</p>
+                        <p class="course-instructor">Tutor: Ellie Kim</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span>3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 7: Functional Movement and Mobility -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/functional_movement.webp" alt="Functional Movement and Mobility" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-info">Staff Pick</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Functional Movement and Mobility</h3>
+                        <p class="course-info">520 students &bull; 2h 30m</p>
+                        <p class="course-instructor">Tutor: Brian Carter</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 8: Cardio Training for All Levels -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/cardio_training.webp" alt="Cardio Training for All Levels" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-warning">Popular</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <h3 class="category-title">Cardio Training for All Levels</h3>
+                        <p class="course-info">800 students &bull; 1h 50m</p>
+                        <p class="course-instructor">Tutor: David Hughes</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Course 9: Building a Sustainable Fitness Routine -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <a href="#" class="category-link">
+                <div class="category-card">
+                    <img src="../images/imagesForCourses/healthAndFitness_page/sustainable_fitness_routine.webp" alt="Building a Sustainable Fitness Routine" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-secondary">Original</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Building a Sustainable Fitness Routine</h3>
+                        <p class="course-info">500 students &bull; 2h 15m</p>
+                        <p class="course-instructor">Tutor: Jessica White</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3">
+    <p class="mb-0">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-dark">Home</a> | <a href="courses.html" class="text-dark">Courses</a> | <a href="community.html" class="text-dark">Community</a> | <a href="profilePageLearner.html" class="text-dark">Profile</a></p>
+    <div id="google_translate_element"></div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+
     
 </body>
 </html>
