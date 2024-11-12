@@ -25,6 +25,7 @@
                     <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
+                <button id="dark-mode-toggle" class="btn btn-outline-dark ms-auto me-3">Dark Mode</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -104,7 +105,7 @@
         </div>
         
 
-        <div class="container my-5">
+        <div class="container my-5" style="background-color: black; color: white; padding: 40px;">
             <div class="row text-center stats-section">
                 <div class="col-md-3 mb-4">
                     <div class="stat-box">
@@ -136,7 +137,7 @@
 
     </div>
 
-    <div class="Social Media">
+    <div class="Social Media" style="background-color: black; color: white; padding: 40px;">
         <div class="row justify-content-center">
             <div class="col-auto text-center">
                 <h3>Follow us on:</h3>
@@ -200,6 +201,22 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById("dark-mode-toggle");
+            if (toggleButton) {
+                toggleButton.addEventListener("click", function() {
+                    document.body.classList.toggle("dark-mode");
+                    if (document.body.classList.contains("dark-mode")) {
+                        this.textContent = "Light Mode";
+                    } else {
+                        this.textContent = "Dark Mode";
+                    }
+                });
+            } else {
+                console.error("Dark mode toggle button not found.");
+            }
+        });
+    </script>
 </body>
 </html>
