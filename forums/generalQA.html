@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Our Styles-->
-    <link rel="stylesheet" href="styles/profile.css">
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title><forum-topic> Forum - Tutord Community</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/forums.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Header Start -->
     <header class="header-area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
+                <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="" style="width: 140px;">
                 </a>
-                <form class="d-flex ms-3" role="search">
-                    <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-                <div id="google_translate_element" class="translate-element ms-3"></div>
+                
+                <!-- Toggle button for mobile view -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
+                <!-- Navbar -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="courses.html">Courses</a>
@@ -46,88 +45,89 @@
                             <a class="nav-link" href="profilePageTutor.html">Tutor Profile</a>
                         </li>
                     </ul>
+
                     <div class="d-flex ms-3">
-                        <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                        <a href="signin.html" class="btn btn-outline-dark">Sign In</a>
                         <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
-                        
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Header End -->
-    <br>
-    <br>
-    <!-- welcome area and profile pic  -->
-    <h1 class="text-center">Welcome to your profile!</h1>
-    <img src="images/profilePic.png" alt="Temp Profile Pic" class="mx-auto d-block rounded-3" width="242" height="236">
-    <p class="text-center">Username Here</p>
-    <br>
-    <br>
-    <!-- scroll box and container to display courses -->
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <div class="container2 p-3 my-3 col-5 bg-light text-dark spacing rounded-3">
-                <p class="text-start fw-bold">My Courses</p>
-                <div class="overflow-scroll" style="max-width: 620px; max-height: 180px;">
-                    <h3>This is where the courses are going to be stored</h3>
-                    <br>
-                    <p>Example Course 1</p>
-                    <p>Example Course 2</p>
-                    <p>Example Course 3</p>
-                    <p>Example Course 4</p>
-                    <p>Example Course 5</p>
-                    <p>Example Course 6</p>
-                    <p>Example Course 7</p>
-                    <p>Example Course 8</p>
-                    <p>Example Course 9</p>
-                    <p>Example Course 10</p>
+
+    <!-- Main Content Start -->
+    <div class="container main-content">
+        <h1><forum-topic> Forum</h1>
+        <p>Welcome to the <forum-topic> Forum! Connect, discuss, and collaborate with others interested in <forum-topic>.</p>
+
+        <!-- Forum Posts Section -->
+        <section class="forum-posts">
+            <h2>Recent Posts</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Understanding Basic Concepts</h3>
+                    <p>Posted by User1 on Nov 11, 2024 - "Can someone help clarify the basics of <forum-topic>?"</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Discussion</a>
+                </li>
+                <li class="list-group-item">
+                    <h3>Best Resources for Beginners</h3>
+                    <p>Posted by User2 on Nov 10, 2024 - "Looking for beginner resources to learn <forum-topic>."</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Discussion</a>
+                </li>
+                <li class="list-group-item">
+                    <h3>Advanced Techniques in <forum-topic></h3>
+                    <p>Posted by User3 on Nov 9, 2024 - "Anyone willing to share some advanced tips?"</p>
+                    <a href="#" class="btn btn-primary btn-sm">View Discussion</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Start a New Discussion -->
+        <section class="new-discussion mt-4">
+            <h2>Start a New Discussion</h2>
+            <form action="#" method="post">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Discussion Title</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content</label>
+                    <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Post Discussion</button>
+            </form>
+        </section>
+    </div>
+    <!-- Main Content End -->
 
-            <div class="container2 p-3 my-3 col-5 bg-light text-dark spacing rounded-3" style="max-width: 620px; max-height: 310px">
-                <h3>User Info</h3>
-                <br>
-                <p>First Name: John</p>
-                <p>Surname: Smith</p>
-                <p>Account Type: Learner</p>
-                <p>Account Created: 01/01/2024</p>
-             </div>
-        </div>
-    </div>  
-
-    <footer class="bg-light text-center py-3">
+    <!-- Footer Start -->
+    <footer class="bg-light text-center py-3 mt-5">
         <p class="mb-0">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-dark">Home</a> | <a href="courses.html" class="text-dark">Courses</a> | <a href="community.html" class="text-dark">Community</a> | <a href="profilePageLearner.html" class="text-dark">Profile</a></p>
         <div id="google_translate_element"></div>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank" class="social-icon">
-              <i class="fab fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
             </a>
             <a href="https://twitter.com" target="_blank" class="social-icon">
-              <i class="fab fa-twitter"></i>
+                <i class="fab fa-twitter"></i>
             </a>
             <a href="https://instagram.com" target="_blank" class="social-icon">
-              <i class="fab fa-instagram"></i>
+                <i class="fab fa-instagram"></i>
             </a>
-          </div>
+        </div>
     </footer>
+    <!-- Footer End -->
 
-       <!-- JS here-->
-
-    <!-- Bootstrap JS, Popper.js, and jQuery (optional, for Bootstrap 4 compatibility) -->
+    <!-- JS Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-
     <script>
         // Close the navbar if the user clicks outside of it
         document.addEventListener('click', function(event) {
             const navbar = document.getElementById('navbarNav');
             const toggle = document.querySelector('.navbar-toggler');
-
-            // Check if the click is outside the navbar and toggle button
             if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
-                // Collapse the navbar if it is expanded
                 if (navbar.classList.contains('show')) {
                     toggle.click();
                 }
@@ -135,15 +135,13 @@
         });
     </script>
 
-
+    <!-- Google Translate Script -->
     <script type="text/javascript">
-        // for google translate option on page
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
 
 </body>
 </html>

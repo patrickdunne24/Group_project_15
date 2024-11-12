@@ -1,7 +1,12 @@
 html body {
     background-color: #DAF5FE;
 }
-
+.custom-gap {
+    margin-right: 5px; 
+}
+.search-bar {
+    width: 300px; 
+}
 .main-content {
     font-family: "Roboto", sans-serif; 
 }

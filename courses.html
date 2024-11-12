@@ -14,18 +14,19 @@
     <!-- Header Start -->
     <header class="header-area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <!-- Logo -->
+            <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="" style="width: 140px;">
                 </a>
-                
-                <!-- Toggle button mobile view -->
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+                <div id="google_translate_element" class="translate-element ms-3"></div>
+                <div id="google_translate_element" class="translate-element ms-3"></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <!-- Navbar -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -46,7 +47,7 @@
                     </ul>
 
                     <div class="d-flex ms-3">
-                        <a href="signin.html" class="btn btn-outline-dark">Sign In</a>
+                        <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
                         <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
                     </div>
                 </div>
@@ -55,54 +56,143 @@
     </header>
     <!-- Header End -->
 
-    <div class="container main-content">  
-    <h1>Courses</h1>
+    <div class="container main-content">
+        <h2 class="section-title text-center mt-5">Explore Course Categories</h2>
+        
+        
+        <div class="row">
+          
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/art.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/art.webp" alt="Creative Arts and Design" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Creative Arts & Design</h3>
+                        </div>
+                    
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <img src="images/art.webp" alt="Creative arts and design" style="width: 33%">
-                <h3>Art</h3>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/businessAndFinance.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/Business_finance.webp" alt="Business and Finance" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Business & Finance</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="images/Business_finance.webp" alt="Business and finance" style="width: 33%">
-                <h3>Business and Finance</h3>   
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/cooking.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/cooking.webp" alt="Cooking and Culinary Skills" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Cooking & Culinary Skills</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="images/cooking.webp" alt="Cooking and culinary skills" style="width: 33%">
-                <h3>Cooking</h3>
+
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/healthAndFitness.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/health_fitness.webp" alt="Health and Fitness" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Health & Fitness</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <img src="images/health_fitness.webp" alt="Health and fitness activities" style="width: 33%">
-                <h3>Health and Fitness</h3>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/languages.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/languages.webp" alt="Language Learning" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Languages</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="images/hobbies.webp" alt="Lifestyle and hobbies" style="width: 33%">
-                <h3>Lifestyle and Hobbies</h3>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/lifestyleAndHobbies.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/hobbies.webp" alt="Lifestyle and Hobbies" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Lifestyle & Hobbies</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="images/languages.webp" alt="Language learning" style="width: 33%">
-                <h3>Languages</h3>  
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/personalDev.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/personal_development.webp" alt="Personal Development" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Personal Development</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <img src="images/personal_development.webp" alt="Personal development and self-improvement" style="width: 33%">
-                <h3>Personal Development</h3>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/technologyAndDev.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/technology_dev.webp" alt="Technology and Development" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Technology & Development</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="images/technology_dev.webp" alt="Technology and development" style="width: 33%">
-                <h3>Technology and Development</h3>
-            </div>
-            <div class="col-12 col-md-4">
-                <img src="images/test_prep.webp" alt="Test preparation" style="width: 33%">
-                <h3>Test Preparation</h3>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <a href="courses/testPrep.html" class="category-link">
+                    <div class="category-card">
+                        <img src="images/test_prep.webp" alt="Test Preparation" class="category-image">
+                        <div class="text-container">
+                            <h3 class="category-title">Test Preparation</h3>
+                        </div>
+                        <div class="favorite-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
-
+    <!--Footer -->
     <footer class="bg-light text-center py-3">
         <p class="mb-0">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-dark">Home</a> | <a href="courses.html" class="text-dark">Courses</a> | <a href="community.html" class="text-dark">Community</a> | <a href="profilePageLearner.html" class="text-dark">Profile</a></p>
         <div id="google_translate_element"></div>
@@ -119,26 +209,20 @@
           </div>
     </footer>
 
-
-
     <!-- JS here-->
 
-    
-        <!-- Bootstrap JS, Popper.js, and jQuery (optional, for Bootstrap 4 compatibility) -->
+    <!-- Bootstrap JS, Popper.js, and jQuery (optional, for Bootstrap 4 compatibility) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
 
-
     <script>
-        // Close the navbar if the user clicks outside of it
         document.addEventListener('click', function(event) {
             const navbar = document.getElementById('navbarNav');
             const toggle = document.querySelector('.navbar-toggler');
 
-            // Check if the click is outside the navbar and toggle button
+            
             if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
-                // Collapse the navbar if it is expanded
                 if (navbar.classList.contains('show')) {
                     toggle.click();
                 }
@@ -146,13 +230,26 @@
         });
     </script>
 
+
     <script type="text/javascript">
-        // for google translate option on page
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stars = document.querySelectorAll('.favorite-star');
+    
+            stars.forEach(star => {
+                star.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevents any navigation effect
+                    star.classList.toggle('favorited');
+                });
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>
