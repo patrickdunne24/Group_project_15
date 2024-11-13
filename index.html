@@ -14,47 +14,60 @@
 
 </head>
 <body>
-    <!-- Header Start -->
-     <header class="header-area">
-        <nav class="navbar navbar-expand-xl navbar-light bg-light">
-            <div class="container-fluid d-flex align-items-center">
-                <!-- Logo and Search Icon -->
-                <div class="d-flex align-items-center me-auto">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logo.png" alt="" style="width: 140px;">
-                    </a>
-                    <button class="btn btn-outline-dark d-xl-none ms-2" type="button">
-                        <i class="fas fa-search"></i>
+    <body>
+        <!-- Header Start -->
+        <header class="header-area">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="d-flex align-items-center me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="" style="width: 140px;">
+                        </a>
+                        <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
+                            <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <!-- Navbar Links -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                            <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
+                        </ul>
+                        <div class="d-flex ms-3">
+                            <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                            <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+                        </div>
+                    </div>
                 </div>
-                <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
-                    <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-                
-                <!-- Navbar -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
-                        <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
-                    </ul>
-                    <div class="d-flex ms-3">
-                        <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
-                        <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+            </nav>
+        </header>   
+
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="d-flex w-100" role="search">
+                            <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    
-
-
+        </div>
+        
     <div class ="main-content">
         <h1 class="title">Become a better version of yourself.</h1>
      <!-- Moving Banner -->
@@ -214,5 +227,6 @@
             }
         });
     </script>
+
 </body>
 </html>

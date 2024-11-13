@@ -15,21 +15,19 @@
     <header class="header-area">
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
             <div class="container-fluid d-flex align-items-center">
-                <!-- Logo and Search Icon -->
                 <div class="d-flex align-items-center me-auto">
                     <a class="navbar-brand" href="index.html">
                         <img src="images/logo.png" alt="" style="width: 140px;">
                     </a>
-                    <button class="btn btn-outline-dark d-xl-none ms-2" type="button">
+                    <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <i class="fas fa-search"></i>
                     </button>
+                    <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
                 </div>
-                <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
-                    <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-                
-                <!-- Navbar -->
+                <!-- Navbar Links -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +46,23 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>   
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="d-flex w-100" role="search">
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Header End -->
 
     <div class="container main-content">
@@ -187,6 +201,8 @@
         </div>
     </div>
 
+    
+
     <!--Footer -->
     <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
         <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-light">Home</a> | <a href="courses.html" class="text-light">Courses</a> | <a href="community.html" class="text-light">Community</a> | <a href="profilePageLearner.html" class="text-light">Profile</a></p>
@@ -244,6 +260,7 @@
             });
         });
     </script>
+    
     
     
 </body>
