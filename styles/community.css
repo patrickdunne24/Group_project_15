@@ -18,3 +18,14 @@
 .search-bar {
     width: 300px; 
 }
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    }
+   
+
+.social-icon:hover i {
+    color: blue;
+}

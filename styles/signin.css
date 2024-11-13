@@ -28,3 +28,15 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    }
+   
+
+.social-icon:hover i {
+    color: blue;
+}
