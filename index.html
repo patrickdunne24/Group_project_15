@@ -15,48 +15,44 @@
 </head>
 <body>
     <!-- Header Start -->
-    <header class="header-area">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="" style="width: 140px;">
-                </a>
-                <form class="d-flex ms-3" role="search">
+     <header class="header-area">
+        <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Logo and Search Icon -->
+                <div class="d-flex align-items-center me-auto">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="" style="width: 140px;">
+                    </a>
+                    <button class="btn btn-outline-dark d-xl-none ms-2" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
                     <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
-                <button id="dark-mode-toggle" class="btn btn-outline-dark ms-auto me-3">Dark Mode</button>
+                
+                <!-- Navbar -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="courses.html">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="community.html">Community</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profilePageLearner.html">Learner Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profilePageTutor.html">Tutor Profile</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
                     </ul>
                     <div class="d-flex ms-3">
                         <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
                         <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
-                        
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-
+    
 
 
     <div class ="main-content">
@@ -87,79 +83,80 @@
                 <img src="images/test_prep.webp" alt="Test Preparation">
             </div>
         </div>
-
-        <div class="container d-flex justify-content-center" style="padding-top: 80px; padding-bottom: 80px;">
-            <div class="row align-items-center">
-                <div class="col-md-4">
-                    <h3>Creative Learning Made Easy</h3>
-                </div>
-                <div class="col-md-8">
-                    <ul class="how-it-works-list" style="list-style-type: none; padding-left: 0;">
-                        <li><span class="check-icon">✔️</span> Thousands of creative classes. Beginner to pro.</li>
-                        <li><span class="check-icon">✔️</span> Taught by creative pros and industry icons.</li>
-                        <li><span class="check-icon">✔️</span> Learning Paths to help you achieve your goals.</li>
-                        <li><span class="check-icon">✔️</span> Certificates to celebrate your accomplishments.</li>
-                    </ul>
+        <div class="black-background" style="background-color: black;">
+            <div class="container d-flex justify-content-center" style="padding-top: 80px; padding-bottom: 80px;">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <h3>Creative Learning Made Easy</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="how-it-works-list" style="list-style-type: none; padding-left: 0;">
+                            <li><span class="check-icon">✔️</span> Thousands of creative classes. Beginner to pro.</li>
+                            <li><span class="check-icon">✔️</span> Taught by creative pros and industry icons.</li>
+                            <li><span class="check-icon">✔️</span> Learning Paths to help you achieve your goals.</li>
+                            <li><span class="check-icon">✔️</span> Certificates to celebrate your accomplishments.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <div class="container my-5" style="background-color: black; color: white; padding: 40px;">
+                <div class="row text-center stats-section">
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>10K+</h2>
+                            <p>Classes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>250K+</h2>
+                            <p>Members</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>8K+</h2>
+                            <p>Teachers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>4.7 <i class="fas fa-star"></i></h2>
+                            <p>App Store Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
-        <div class="container my-5" style="background-color: black; color: white; padding: 40px;">
-            <div class="row text-center stats-section">
-                <div class="col-md-3 mb-4">
-                    <div class="stat-box">
-                        <h2>10K+</h2>
-                        <p>Classes</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="stat-box">
-                        <h2>250K+</h2>
-                        <p>Members</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="stat-box">
-                        <h2>8K+</h2>
-                        <p>Teachers</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="stat-box">
-                        <h2>4.7 <i class="fas fa-star"></i></h2>
-                        <p>App Store Rating</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
 
-    </div>
-
-    <div class="Social Media" style="background-color: black; color: white; padding: 40px;">
-        <div class="row justify-content-center">
-            <div class="col-auto text-center">
-                <h3>Follow us on:</h3>
-                <a href="https://facebook.com" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://twitter.com" target="_blank" style="color: #1DA1F2;"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://instagram.com" target="_blank" style="color: #C13584;"><i class="fab fa-instagram fa-2x"></i></a>  
-            </div>
-        </div>    
-    </div>
     
 
+            <div class="Social Media" style="background-color: black; padding-bottom: 60px;">
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center">
+                        <h3 style="color:white">Follow us on:</h3>
+                        <a href="https://facebook.com" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://twitter.com" target="_blank" style="color: #1DA1F2;"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://instagram.com" target="_blank" style="color: #C13584;"><i class="fab fa-instagram fa-2x"></i></a>  
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>    
 
-    <footer class="bg-light text-center py-3">
-        <p class="mb-0">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-dark">Home</a> | <a href="courses.html" class="text-dark">Courses</a> | <a href="community.html" class="text-dark">Community</a> | <a href="profilePageLearner.html" class="text-dark">Profile</a></p>
+
+    <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+        <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-light">Home</a> | <a href="courses.html" class="text-light">Courses</a> | <a href="community.html" class="text-light">Community</a> | <a href="profilePageLearner.html" class="text-light">Profile</a></p>
         <div id="google_translate_element"></div>
         <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" class="social-icon">
+            <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
               <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" class="social-icon">
+            <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" class="social-icon">
+            <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
