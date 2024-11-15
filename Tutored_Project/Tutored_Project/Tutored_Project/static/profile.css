@@ -1,0 +1,27 @@
+html body {
+    background-color: #DAF5FE;
+}
+.custom-gap {
+    margin-right: 5px; 
+}
+.spacing {
+    margin-right: 10px;
+}
+.search-bar {
+    width: 300px; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    }
+.social-icon i {
+    font-size: 24px;
+    color: black;
+    }    
+
+.social-icon:hover i {
+    color: blue;
+}
