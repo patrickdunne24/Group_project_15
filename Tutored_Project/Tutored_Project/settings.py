@@ -78,8 +78,14 @@ WSGI_APPLICATION = 'Tutored_Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'GroupProjectDBB',  # Azure SQL Database Name
+        'USER': 'groupproject',      # SQL Server Username
+        'PASSWORD': '5bs4siBQAyx0x4',   # SQL Server Password
+        'HOST': 'groupprojectdb.database.windows.net',  # Azure SQL Server hostname                 # Leave empty for default
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',  # Make sure you have the correct ODBC driver
+        },
     }
 }
 
