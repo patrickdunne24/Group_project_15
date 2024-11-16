@@ -74,7 +74,7 @@
                 <div class="col-md-6">
                     <div class="card shadow-sm p-4">
                         <h3 class="text-center mb-4 text-dark">Create Your Account</h3>
-                        <form>
+                        <form id="signupForm">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control rounded-3 border-dark" id="username" placeholder="Enter username" required>
@@ -95,7 +95,24 @@
                                 <label for="confirm-password" class="form-label">Confirm Password</label>
                                 <input type="password" class="form-control rounded-3 border-dark" id="confirm-password" placeholder="Confirm password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-3">Sign Up</button>
+                            <div class="mb-4">
+                                <label for="dob" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control rounded-3 border-dark" id="dob" required>
+                                <div id="dobError" class="text-danger mt-2" style="display: none;">You must be at least 16 years old to create an account as a tutor.</div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Role</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="role" id="learner" value="Learner" required>
+                                    <label class="form-check-label" for="learner">Learner</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="role" id="tutor" value="Tutor" required>
+                                    <label class="form-check-label" for="tutor">Tutor</label>
+                                </div>
+                                <div id="roleError" class="text-danger mt-2" style="display: none;">You must select a role.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-3" id="signupButton">Sign Up</button>
                         </form>
                         <p class="text-center mt-3">
                             Already have an account? <a href="signin.html" class="text-decoration-none">Sign In</a>
@@ -105,6 +122,7 @@
             </div>
         </div>
     </div>
+    
     
 
 
@@ -154,6 +172,46 @@
             new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
     </script>
+    <script>
+        document.getElementById('signupButton').addEventListener('click', function (event) {
+            const dobInput = document.getElementById('dob');
+            const dobError = document.getElementById('dobError');
+            const learner = document.getElementById('learner');
+            const tutor = document.getElementById('tutor');
+            const roleError = document.getElementById('roleError');
+            const dob = new Date(dobInput.value);
+            const today = new Date();
+    
+            // Reset error states
+            dobError.style.display = 'none';
+            roleError.style.display = 'none';
+    
+            // Validate role selection
+            if (!learner.checked && !tutor.checked) {
+                event.preventDefault();
+                roleError.style.display = 'block';
+                return;
+            }
+    
+            // Validate age if "Tutor" is selected
+            if (
+                tutor.checked &&
+                (
+                    dobInput.value === '' ||
+                    today.getFullYear() - dob.getFullYear() < 16 ||
+                    (today.getFullYear() - dob.getFullYear() === 16 &&
+                        (today.getMonth() - dob.getMonth() < 0 ||
+                            (today.getMonth() - dob.getMonth() === 0 &&
+                                today.getDate() - dob.getDate() < 0)))
+                )
+            ) {
+                event.preventDefault();
+                dobError.style.display = 'block';
+                return;
+            }
+        });
+    </script>
+    
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
