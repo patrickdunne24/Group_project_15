@@ -40,3 +40,12 @@ height: 100%;
 .social-icon:hover i {
     color: blue;
 }
+
+input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+input:focus {
+    box-shadow: 0 0 5px #007BFF;
+    border-color: #007BFF;
+}
