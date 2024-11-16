@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Courses</title>
+    <!-- Metadata for the document -->
+    <meta charset="UTF-8"> <!-- Defines character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on all devices -->
+    <title>Cooking</title> <!-- Sets the page title -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/courses.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> <!-- Bootstrap for responsive layout -->
+    <link rel="stylesheet" href="../styles/courses.css"> <!-- Custom stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts for Roboto -->
+
 </head>
 <body>
-    <!-- Header Start -->
+    <!-- Header Section Start -->
     <header class="header-area">
+        <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
             <div class="container-fluid d-flex align-items-center">
+                <!-- Logo and Search Bar -->
                 <div class="d-flex align-items-center me-auto">
                     <a class="navbar-brand" href="../index.html">
-                        <img src="../images/logo.png" alt="" style="width: 140px;">
+                        <!-- Website logo -->
+                        <img src="../images/logo.png" alt="" style="width: 140px;"> 
                     </a>
+                    <!-- Search Button for Mobile -->
                     <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
                     </button>
+                    <!-- Search Form for Desktop -->
                     <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
-                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search"> <!-- Input field -->
+                        <button class="btn btn-outline-dark" type="submit">Search</button> <!-- Search button -->
                     </form>
                 </div>
-                <!-- Navbar Links -->
+                <!-- Navbar Links and Buttons -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span> <!-- Mobile navigation toggle icon -->
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <!-- Navbar Links -->
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="../courses.html">Courses</a></li>
@@ -39,6 +48,7 @@
                         <li class="nav-item"><a class="nav-link" href="../profilePageLearner.html">Learner Profile</a></li>
                         <li class="nav-item"><a class="nav-link" href="../profilePageTutor.html">Tutor Profile</a></li>
                     </ul>
+                    <!-- Sign In and Sign Up Buttons -->
                     <div class="d-flex ms-3">
                         <a href="../signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
                         <a href="../signup.html" class="btn btn-dark me-2">Sign Up</a>
@@ -46,14 +56,18 @@
                 </div>
             </div>
         </nav>
-    </header>   
-
+    </header>
+       <!-- End of Header Section -->
+    
+    <!-- Search Modal Start -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content bg-dark text-white">
+                <!-- Modal Header with Close Button -->
                 <div class="modal-header border-0">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <!-- Modal Body with Search Form -->
                 <div class="modal-body">
                     <form class="d-flex w-100" role="search">
                         <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
@@ -63,16 +77,17 @@
             </div>
         </div>
     </div>
-    
-    <!-- Header End -->
+    <!-- Search Modal End -->
 
-    <!-- Header End -->
+    <!-- Main Content Start -->
     <div class="container main-content">
+        <!-- Section Title -->
         <h2 class="section-title text-center mt-5">Art & Design Courses</h2>
+        <!-- Filters Section -->
         <div class="container my-4">
             <h4>Filter Courses</h4>
             <div class="row g-2">
-                <!-- Level Filter -->
+                <!-- Level Filter Dropdown -->
                 <div class="col-12 col-md-4">
                     <select id="levelFilter" class="form-select">
                         <option value="">All Levels</option>
@@ -82,7 +97,7 @@
                     </select>
                 </div>
 
-                <!-- Tags Filter -->
+                <!-- Tags Filter Dropdown -->
                 <div class="col-12 col-md-4">
                     <select id="tagFilter" class="form-select">
                         <option value="">All Tags</option>
@@ -92,7 +107,7 @@
                     </select>
                 </div>
 
-                <!-- Rating Filter -->
+                <!-- Rating Filter Dropdown -->
                 <div class="col-12 col-md-4">
                     <select id="ratingFilter" class="form-select">
                         <option value="">All Ratings</option>
@@ -110,15 +125,21 @@
             <!-- Course Card 1 -->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="category-card" data-level="Beginner" data-tag="New" data-rating="4.5">
+                    <!-- Course Image -->
                     <img src="../images/imagesForCourses/cooking_page/italian_cooking.webp" alt="Introduction to Italian Cooking" class="category-image">
                     <div class="text-container">
+                        <!-- Course Tags -->
                         <span class="badge bg-success">New</span>
                         <span class="badge bg-primary">Beginner</span>
+                        <!-- Course Title -->
                         <h3 class="category-title">Introduction to Italian Cooking</h3>
+                        <!-- Course Info -->
                         <p class="course-info">350 students &bull; 2h 15m</p>
+                        <!-- Tutor Information -->
                         <p class="course-instructor">
                             Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Luca Rossi">Luca Rossi</a>
                         </p>
+                        <!-- Course Rating -->
                         <div class="course-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -128,6 +149,7 @@
                             <span>4.5</span>
                         </div>
                     </div>
+                    <!-- Favorite Icon -->
                     <div class="favorite-star"><i class="fas fa-star"></i></div>
                 </div>
             </div>
@@ -135,15 +157,21 @@
             <!-- Course Card 2 -->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="category-card" data-level="Beginner" data-tag="Popular" data-rating="4.0">
+                    <!-- Course Image -->
                     <img src="../images/imagesForCourses/cooking_page/baking_basics.webp" alt="Baking Basics: Bread and Pastries" class="category-image">
                     <div class="text-container">
+                        <!-- Course Tags -->
                         <span class="badge bg-warning">Popular</span>
                         <span class="badge bg-primary">Beginner</span>
+                        <!-- Course Title -->
                         <h3 class="category-title">Baking Basics: Bread and Pastries</h3>
+                        <!-- Course Info -->
                         <p class="course-info">420 students &bull; 3h 0m</p>
+                        <!-- Tutor Information -->
                         <p class="course-instructor">
                             Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Sophie Baker">Sophie Baker</a>
                         </p>
+                        <!-- Course Rating -->
                         <div class="course-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -153,171 +181,222 @@
                             <span>4.0</span>
                         </div>
                     </div>
+                    <!-- Favorite Icon -->
+                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="New" data-rating="3.0">
+                    <!-- Course Image -->
+                    <img src="../images/imagesForCourses/cooking_page/vegan_cooking.webp" alt="Vegan Cooking Essentials" class="category-image">
+                    <div class="text-container">
+                        <!-- Course Tags -->
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <!-- Course Title -->
+                        <h3 class="category-title">Vegan Cooking Essentials</h3>
+                        <!-- Course Info -->
+                        <p class="course-info">280 students &bull; 2h 45m</p>
+                        <!-- Tutor Information -->
+                        <p class="course-instructor">
+                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Priya Sharma">Priya Sharma</a>
+                        </p>
+                        <!-- Course Rating -->
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3.0</span>
+                        </div>
+                    </div>
+                    <!-- Favorite Icon -->
+                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="Staff Pick" data-rating="5.0">
+                    <!-- Course Image -->
+                    <img src="../images/imagesForCourses/cooking_page/knife_skills.webp" alt="Mastering Knife Skills" class="category-image">
+                    <div class="text-container">
+                        <!-- Course Tags -->
+                        <span class="badge bg-info">Staff Pick</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <!-- Course Title -->
+                        <h3 class="category-title">Mastering Knife Skills</h3>
+                        <!-- Course Info -->
+                        <p class="course-info">500 students &bull; 1h 30m</p>
+                        <!-- Tutor Information -->
+                        <p class="course-instructor">
+                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Gordon Chen">Gordon Chen</a>
+                        </p>
+                        <!-- Course Rating -->
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <!-- Favorite Icon -->
+                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+
+            <!-- Course Card 5 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="Popular" data-rating="4.5">
+                    <!-- Course Image -->
+                    <img src="../images/imagesForCourses/cooking_page/asian_street_food.webp" alt="Asian Street Food Delights" class="category-image">
+                    <div class="text-container">
+                        <!-- Course Tags -->
+                        <span class="badge bg-warning">Popular</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <!-- Course Title -->
+                        <h3 class="category-title">Asian Street Food Delights</h3>
+                        <!-- Course Info -->
+                        <p class="course-info">760 students &bull; 3h 0m</p>
+                        <!-- Tutor Information -->
+                        <p class="course-instructor">
+                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Li Wei">Li Wei</a>
+                        </p>
+                        <!-- Course Rating -->
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <!-- Favorite Icon -->
+                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+
+            <!-- Course Card 6 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="New" data-rating="3.0">
+                    <!-- Course Image -->
+                    <img src="../images/imagesForCourses/cooking_page/meal_prep.webp" alt="Meal Prep for Busy Schedules" class="category-image">
+                    <div class="text-container">
+                        <!-- Course Tags -->
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <!-- Course Title -->
+                        <h3 class="category-title">Meal Prep for Busy Schedules</h3>
+                        <!-- Course Info -->
+                        <p class="course-info">420 students &bull; 2h 20m</p>
+                        <!-- Tutor Information -->
+                        <p class="course-instructor">
+                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Emily White">Emily White</a>
+                        </p>
+                        <!-- Course Rating -->
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3.0</span>
+                        </div>
+                    </div>
+                    <!-- Favorite Icon -->
+                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+
+            <!-- Course Card 7 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="New" data-rating="4.0">
+                    <!-- Course Image -->
+                    <img src="../images/imagesForCourses/cooking_page/french_pastry.webp" alt="French Pastry Workshop" class="category-image">
+                    <div class="text-container">
+                        <!-- Course Tags -->
+                        <span class="badge bg-success">New</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <!-- Course Title -->
+                        <h3 class="category-title">French Pastry Workshop</h3>
+                        <!-- Course Info -->
+                        <p class="course-info">380 students &bull; 2h 50m</p>
+                        <!-- Tutor Information -->
+                        <p class="course-instructor">
+                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Marie Dubois">Marie Dubois</a>
+                        </p>
+                        <!-- Course Rating -->
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                    <!-- Favorite Icon -->
+                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+
+            <!-- Course Card 8 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="Staff Pick" data-rating="4.5">
+                    <!-- Course Image -->
+                    <img src="../images/imagesForCourses/cooking_page/indian_cuisine.webp" alt="Cooking with Spices: Indian Cuisine" class="category-image">
+                    <div class="text-container">
+                        <!-- Course Tags -->
+                        <span class="badge bg-info">Staff Pick</span>
+                        <span class="badge bg-primary">Intermediate</span>
+                        <!-- Course Title -->
+                        <h3 class="category-title">Cooking with Spices: Indian Cuisine</h3>
+                        <!-- Course Info -->
+                        <p class="course-info">590 students &bull; 3h 10m</p>
+                        <!-- Tutor Information -->
+                        <p class="course-instructor">
+                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Anjali Kumar">Anjali Kumar</a>
+                        </p>
+                        <!-- Course Rating -->
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <!-- Favorite Icon -->
                     <div class="favorite-star"><i class="fas fa-star"></i></div>
                 </div>
             </div>
         
 
-        
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="category-card" data-level="Intermediate" data-tag="New" data-rating="3.0">
-                <img src="../images/imagesForCourses/cooking_page/vegan_cooking.webp" alt="Vegan Cooking Essentials" class="category-image">
-                <div class="text-container">
-                    <span class="badge bg-success">New</span>
-                    <span class="badge bg-primary">Intermediate</span>
-                    <h3 class="category-title">Vegan Cooking Essentials</h3>
-                    <p class="course-info">280 students &bull; 2h 45m</p>
-                    <p class="course-instructor">
-                        Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Priya Sharma">Priya Sharma</a>
-                    </p>
-                    <div class="course-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>3.0</span>
-                    </div>
-                </div>
-                <div class="favorite-star"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="category-card" data-level="Beginner" data-tag="Staff Pick" data-rating="5.0">
-                <img src="../images/imagesForCourses/cooking_page/knife_skills.webp" alt="Mastering Knife Skills" class="category-image">
-                <div class="text-container">
-                    <span class="badge bg-info">Staff Pick</span>
-                    <span class="badge bg-primary">Beginner</span>
-                    <h3 class="category-title">Mastering Knife Skills</h3>
-                    <p class="course-info">500 students &bull; 1h 30m</p>
-                    <p class="course-instructor">
-                        Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Gordon Chen">Gordon Chen</a>
-                    </p>
-                    <div class="course-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>5.0</span>
-                    </div>
-                </div>
-                <div class="favorite-star"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-        
-            
-                <!-- Updated Course Card 5 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="category-card" data-level="Intermediate" data-tag="Popular" data-rating="4.5">
-                <img src="../images/imagesForCourses/cooking_page/asian_street_food.webp" alt="Asian Street Food Delights" class="category-image">
-                <div class="text-container">
-                    <span class="badge bg-warning">Popular</span>
-                    <span class="badge bg-primary">Intermediate</span>
-                    <h3 class="category-title">Asian Street Food Delights</h3>
-                    <p class="course-info">760 students &bull; 3h 0m</p>
-                    <p class="course-instructor">
-                        Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Li Wei">Li Wei</a>
-                    </p>
-                    <div class="course-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <i class="far fa-star"></i>
-                        <span>4.5</span>
-                    </div>
-                </div>
-                <div class="favorite-star"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-
-        <!-- Updated Course Card 6 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="category-card" data-level="Beginner" data-tag="New" data-rating="3.0">
-                <img src="../images/imagesForCourses/cooking_page/meal_prep.webp" alt="Meal Prep for Busy Schedules" class="category-image">
-                <div class="text-container">
-                    <span class="badge bg-success">New</span>
-                    <span class="badge bg-primary">Beginner</span>
-                    <h3 class="category-title">Meal Prep for Busy Schedules</h3>
-                    <p class="course-info">420 students &bull; 2h 20m</p>
-                    <p class="course-instructor">
-                        Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Emily White">Emily White</a>
-                    </p>
-                    <div class="course-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>3.0</span>
-                    </div>
-                </div>
-                <div class="favorite-star"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="category-card" data-level="Intermediate" data-tag="New" data-rating="4.0">
-                <img src="../images/imagesForCourses/cooking_page/french_pastry.webp" alt="French Pastry Workshop" class="category-image">
-                <div class="text-container">
-                    <span class="badge bg-success">New</span>
-                    <span class="badge bg-primary">Intermediate</span>
-                    <h3 class="category-title">French Pastry Workshop</h3>
-                    <p class="course-info">380 students &bull; 2h 50m</p>
-                    <p class="course-instructor">
-                        Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Marie Dubois">Marie Dubois</a>
-                    </p>
-                    <div class="course-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>4.0</span>
-                    </div>
-                </div>
-                <div class="favorite-star"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="category-card" data-level="Intermediate" data-tag="Staff Pick" data-rating="4.5">
-                <img src="../images/imagesForCourses/cooking_page/indian_cuisine.webp" alt="Cooking with Spices: Indian Cuisine" class="category-image">
-                <div class="text-container">
-                    <span class="badge bg-info">Staff Pick</span>
-                    <span class="badge bg-primary">Intermediate</span>
-                    <h3 class="category-title">Cooking with Spices: Indian Cuisine</h3>
-                    <p class="course-info">590 students &bull; 3h 10m</p>
-                    <p class="course-instructor">
-                        Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Anjali Kumar">Anjali Kumar</a>
-                    </p>
-                    <div class="course-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <i class="far fa-star"></i>
-                        <span>4.5</span>
-                    </div>
-                </div>
-                <div class="favorite-star"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-
+        <!-- Course Card for Advanced Sauces and Marinades -->
         <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="category-card" data-level="Advanced" data-tag="Popular" data-rating="3.0">
+                <!-- Course Image -->
                 <img src="../images/imagesForCourses/cooking_page/sauces_marinades.webp" alt="Advanced Sauces and Marinades" class="category-image">
                 <div class="text-container">
+                    <!-- Course Tags -->
                     <span class="badge bg-warning">Popular</span>
                     <span class="badge bg-danger">Advanced</span>
+                    <!-- Course Title -->
                     <h3 class="category-title">Advanced Sauces and Marinades</h3>
+                    <!-- Course Info -->
                     <p class="course-info">310 students &bull; 2h 45m</p>
+                    <!-- Tutor Information -->
                     <p class="course-instructor">
                         Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Oscar Martinez">Oscar Martinez</a>
                     </p>
+                    <!-- Course Rating -->
                     <div class="course-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -327,150 +406,185 @@
                         <span>3.0</span>
                     </div>
                 </div>
+                <!-- Favorite Icon -->
                 <div class="favorite-star"><i class="fas fa-star"></i></div>
             </div>
         </div>
     </div>
 
-     <!-- Bootstrap Contact Tutor Modal -->
-     <div class="modal fade" id="contactTutorModal" tabindex="-1" aria-labelledby="contactTutorModalLabel" aria-hidden="true">
+    <!-- Bootstrap Contact Tutor Modal -->
+    <div class="modal fade" id="contactTutorModal" tabindex="-1" aria-labelledby="contactTutorModalLabel" aria-hidden="true">
+        <!-- Modal Dialog Container -->
         <div class="modal-dialog">
+            <!-- Modal Content -->
             <div class="modal-content">
+                <!-- Modal Header -->
                 <div class="modal-header">
+                    <!-- Modal Title -->
                     <h5 class="modal-title" id="contactTutorModalLabel">Contact Tutor</h5>
+                    <!-- Close Button -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <!-- Modal Body -->
                 <div class="modal-body">
+                    <!-- Tutor Name Display -->
                     <p id="tutorName">Tutor: </p>
+                    <!-- Contact Form -->
                     <form>
+                        <!-- Message Input -->
                         <div class="mb-3">
                             <label for="message" class="form-label">Message:</label>
                             <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..."></textarea>
                         </div>
+                        <!-- Send Button -->
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- End of Contact Tutor Modal -->
+
+    <!-- Business and Finance Section -->
     <div class="container text-center mt-5">
-        <h2>Explore Your Culinary Passion</h2>
+        <!-- Section Title -->
+        <h2>Advance Your Business & Financial Knowledge</h2>
+        <!-- Description Text -->
         <div class="text-content mx-auto" style="max-width: 700px;">
             <p>
-                Embark on a journey of flavors and techniques. With these Tutord cooking classes, you can discover the art of culinary mastery across a variety of cuisines and skills, from Italian and French cooking to vegan essentials and pastry perfection. Whether you’re a beginner learning the basics or an experienced chef looking to refine your expertise, these classes offer hands-on lessons in everything from knife skills and meal prep to mastering spices and creating gourmet dishes. Let your kitchen become your canvas, experiment with new recipes, and take your culinary skills to the next level. There’s a world of flavors waiting for you on Tutord!
+                Step into the world of business and finance with courses that equip you for success. Tutord’s business and finance classes cover a range of essential topics, from financial markets and investment strategies to personal finance and digital marketing. Whether you’re a budding entrepreneur, a finance professional, or simply looking to manage your own finances more effectively, these classes will empower you with the skills and insights to make informed decisions and drive growth. Discover the tools, techniques, and strategies that can shape your career, and take a step closer to your financial and business goals with Tutord.
             </p>
         </div>
     </div>
+    <!-- End of Business and Finance Section -->
+
     
-    <!-- Footer -->
-    <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
-        <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="../index.html" class="text-light">Home</a> | <a href="../courses.html" class="text-light">Courses</a> | <a href="../community.html" class="text-light">Community</a> | <a href="../profilePageLearner.html" class="text-light">Profile</a></p>
-        <div id="google_translate_element"></div>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-    </footer>
+   <!-- Footer Section Start -->
+<footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+    <!-- Footer Links and Copyright -->
+    <p class="text-light">
+        &copy; 2024 Tutord. All rights reserved | 
+        <a href="../index.html" class="text-light">Home</a> | 
+        <a href="../courses.html" class="text-light">Courses</a> | 
+        <a href="../community.html" class="text-light">Community</a> | 
+        <a href="../profilePageLearner.html" class="text-light">Profile</a>
+    </p>
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element"></div>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+            <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+            <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+            <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+    </div>
+</footer>
+<!-- Footer Section End -->
 
-   <!-- Bootstrap JS, Popper.js, and jQuery (optional, for Bootstrap 4 compatibility) -->
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<!-- JavaScript Libraries and Frameworks -->
+<!-- Bootstrap JS and Popper.js for responsive behavior -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
+<!-- JavaScript for Navbar Auto-Close -->
+<script>
+    document.addEventListener('click', function(event) {
+        const navbar = document.getElementById('navbarNav');
+        const toggle = document.querySelector('.navbar-toggler');
 
-   <script>
-       document.addEventListener('click', function(event) {
-           const navbar = document.getElementById('navbarNav');
-           const toggle = document.querySelector('.navbar-toggler');
+        // Close navbar if click occurs outside it and it is currently open
+        if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
+            if (navbar.classList.contains('show')) {
+                toggle.click();
+            }
+        }
+    });
+</script>
 
-           
-           if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
-               if (navbar.classList.contains('show')) {
-                   toggle.click();
-               }
-           }
-       });
-   </script>
+<!-- Google Translate Widget Script -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<!-- JavaScript for Favorite Star Toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stars = document.querySelectorAll('.favorite-star');
 
-   <script type="text/javascript">
-       function googleTranslateElementInit() {
-           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-       }
-   </script>
-   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        // Toggle "favorited" class on click
+        stars.forEach(star => {
+            star.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent navigation effect
+                star.classList.toggle('favorited');
+            });
+        });
+    });
+</script>
 
-   <script>
-       document.addEventListener('DOMContentLoaded', () => {
-           const stars = document.querySelectorAll('.favorite-star');
+<!-- JavaScript for Course Filtering -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const coursesContainer = document.getElementById("coursesContainer");
+        const filters = {
+            level: document.getElementById("levelFilter"),
+            tag: document.getElementById("tagFilter"),
+            rating: document.getElementById("ratingFilter"),
+        };
 
-           stars.forEach(star => {
-               star.addEventListener('click', (event) => {
-                   event.preventDefault(); // Prevents any navigation effect
-                   star.classList.toggle('favorited');
-               });
-           });
-       });
-   </script>
-       <script>
-       document.addEventListener("DOMContentLoaded", () => {
-           const coursesContainer = document.getElementById("coursesContainer");
-           const filters = {
-               level: document.getElementById("levelFilter"),
-               tag: document.getElementById("tagFilter"),
-               rating: document.getElementById("ratingFilter"),
-           };
+        const filterCourses = () => {
+            const levelValue = filters.level.value;
+            const tagValue = filters.tag.value;
+            const ratingValue = filters.rating.value ? parseFloat(filters.rating.value) : null;
 
-           const filterCourses = () => {
-               const levelValue = filters.level.value;
-               const tagValue = filters.tag.value;
-               const ratingValue = filters.rating.value ? parseFloat(filters.rating.value) : null;
+            const courses = coursesContainer.querySelectorAll(".category-card");
 
-               const courses = coursesContainer.querySelectorAll(".category-card");
+            // Show or hide courses based on filter criteria
+            courses.forEach(course => {
+                const courseLevel = course.getAttribute("data-level");
+                const courseTag = course.getAttribute("data-tag");
+                const courseRating = parseFloat(course.getAttribute("data-rating"));
 
-               courses.forEach(course => {
-                   const courseLevel = course.getAttribute("data-level");
-                   const courseTag = course.getAttribute("data-tag");
-                   const courseRating = parseFloat(course.getAttribute("data-rating"));
+                let isVisible = true;
 
-                   let isVisible = true;
+                if (levelValue && courseLevel !== levelValue) isVisible = false;
+                if (tagValue && courseTag !== tagValue) isVisible = false;
+                if (ratingValue && courseRating < ratingValue) isVisible = false;
 
-                   if (levelValue && courseLevel !== levelValue) isVisible = false;
-                   if (tagValue && courseTag !== tagValue) isVisible = false;
-                   if (ratingValue && courseRating < ratingValue) isVisible = false;
+                course.parentElement.style.display = isVisible ? "block" : "none";
+            });
+        };
 
-                   course.parentElement.style.display = isVisible ? "block" : "none";
-               });
-           };
+        // Attach event listeners to filter dropdowns
+        Object.values(filters).forEach(filter => {
+            filter.addEventListener("change", filterCourses);
+        });
 
-           // Attach change event listeners to filters
-           Object.values(filters).forEach(filter => {
-               filter.addEventListener("change", filterCourses);
-           });
+        // Initial filter to display all courses
+        filterCourses();
+    });
+</script>
 
-           // Initial filter to show all courses
-           filterCourses();
-       });
+<!-- JavaScript for Handling Tutor Modal -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactTutorModal = document.getElementById("contactTutorModal");
+        const tutorNameElem = document.getElementById("tutorName");
 
-   </script>
-   <!-- JavaScript for Handling Tutor Name -->
-   <script>
-       document.addEventListener("DOMContentLoaded", function () {
-           const contactTutorModal = document.getElementById("contactTutorModal");
-           const tutorNameElem = document.getElementById("tutorName");
-       
-           contactTutorModal.addEventListener("show.bs.modal", function (event) {
-               const button = event.relatedTarget; // Button that triggered the modal
-               const tutorName = button.getAttribute("data-tutor"); // Extract info from data-tutor attribute
-               tutorNameElem.textContent = "Tutor: " + tutorName;
-           });
-       });
-       </script>
+        // Update modal content with tutor's name when triggered
+        contactTutorModal.addEventListener("show.bs.modal", function (event) {
+            const button = event.relatedTarget; // Button that triggered the modal
+            const tutorName = button.getAttribute("data-tutor"); // Get tutor name from data-tutor attribute
+            tutorNameElem.textContent = "Tutor: " + tutorName;
+        });
+    });
+</script>
 </body>
 </html>
