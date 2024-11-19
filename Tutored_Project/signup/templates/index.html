@@ -1,65 +1,74 @@
+{% load static %}
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutored Home</title>
+    <title>Tutorlink Home</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Group_project_15\Tutored_Project\static\style.css"
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" >
+    <link rel="stylesheet" href="{% static "index.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 </head>
 <body>
-    <!-- Header Start -->
-    <header class="header-area">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="" style="width: 140px;">
-                </a>
-                
-                <!-- Toggle mobile view -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- Navbar -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/courses">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/community">Community</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profilePageLearner">Learner Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profilePageTutor">Tutor Profile</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex ms-3">
-                        <a href="/signin" class="btn btn-outline-dark">Sign In</a>
-                        <a href="/signup" class="btn btn-dark me-2">Sign Up</a>
-                        
+    <body>
+        <!-- Header Start -->
+        <header class="header-area">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="d-flex align-items-center me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="" style="width: 140px;">
+                        </a>
+                        <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
+                            <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <!-- Navbar Links -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                            <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
+                        </ul>
+                        <div class="d-flex ms-3">
+                            <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                            <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>   
+
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="d-flex w-100" role="search">
+                            <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-
-
+        </div>
+        
     <div class ="main-content">
         <h1 class="title">Become a better version of yourself.</h1>
      <!-- Moving Banner -->
@@ -88,49 +97,80 @@
                 <img src="images/test_prep.webp" alt="Test Preparation">
             </div>
         </div>
-
-        <div class="container d-flex justify-content-centre">
-            <div class="row align-items-center">
-                <div class="col-md-4">
-                    <h3>How it works</h3>
-                </div>
-                <div class="col-md-8">
-                    <ol class="how-it-works-list" style="margin-left: 10px">
-                        <li>Browse Courses</li>
-                        <li>Enroll</li>
-                        <li>Learn</li>
-                    </ol>
+        <div class="black-background" style="background-color: black;">
+            <div class="container d-flex justify-content-center" style="padding-top: 80px; padding-bottom: 80px;">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <h3>Creative Learning Made Easy</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="how-it-works-list" style="list-style-type: none; padding-left: 0;">
+                            <li><span class="check-icon">✔️</span> Thousands of creative classes. Beginner to pro.</li>
+                            <li><span class="check-icon">✔️</span> Taught by creative pros and industry icons.</li>
+                            <li><span class="check-icon">✔️</span> Learning Paths to help you achieve your goals.</li>
+                            <li><span class="check-icon">✔️</span> Certificates to celebrate your accomplishments.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </div>
-
-    <div class="Social Media">
-        <div class="row justify-content-center">
-            <div class="col-auto text-center">
-                <h3>Follow us on:</h3>
-                <a href="https://facebook.com" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://twitter.com" target="_blank" style="color: #1DA1F2;"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://instagram.com" target="_blank" style="color: #C13584;"><i class="fab fa-instagram fa-2x"></i></a>  
+            
+            <div class="container my-5" style="background-color: black; color: white; padding: 40px;">
+                <div class="row text-center stats-section">
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>10K+</h2>
+                            <p>Classes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>250K+</h2>
+                            <p>Members</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>8K+</h2>
+                            <p>Teachers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-box">
+                            <h2>4.7 <i class="fas fa-star"></i></h2>
+                            <p>App Store Rating</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>    
-    </div>
+        
+
     
 
+            <div class="Social Media" style="background-color: black; padding-bottom: 60px;">
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center">
+                        <h3 style="color:white">Follow us on:</h3>
+                        <a href="https://facebook.com" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://twitter.com" target="_blank" style="color: #1DA1F2;"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://instagram.com" target="_blank" style="color: #C13584;"><i class="fab fa-instagram fa-2x"></i></a>  
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>    
 
-    <footer class="bg-light text-center py-3">
-        <p class="mb-0">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-dark">Home</a> | <a href="courses.html" class="text-dark">Courses</a> | <a href="community.html" class="text-dark">Community</a> | <a href="profilePageLearner.html" class="text-dark">Profile</a></p>
+
+    <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+        <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-light">Home</a> | <a href="courses.html" class="text-light">Courses</a> | <a href="community.html" class="text-light">Community</a> | <a href="profilePageLearner.html" class="text-light">Profile</a></p>
         <div id="google_translate_element"></div>
         <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" class="social-icon">
+            <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
               <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" class="social-icon">
+            <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" class="social-icon">
+            <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -171,6 +211,23 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById("dark-mode-toggle");
+            if (toggleButton) {
+                toggleButton.addEventListener("click", function() {
+                    document.body.classList.toggle("dark-mode");
+                    if (document.body.classList.contains("dark-mode")) {
+                        this.textContent = "Light Mode";
+                    } else {
+                        this.textContent = "Dark Mode";
+                    }
+                });
+            } else {
+                console.error("Dark mode toggle button not found.");
+            }
+        });
+    </script>
 
 </body>
 </html>
