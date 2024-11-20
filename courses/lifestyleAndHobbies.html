@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Health & Fitness</title>
 
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Start -->
+    <!-- Header Section Start -->
     <header class="header-area">
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
             <div class="container-fluid d-flex align-items-center">
@@ -27,7 +28,6 @@
                         <button class="btn btn-outline-dark" type="submit">Search</button>
                     </form>
                 </div>
-                <!-- Navbar Links -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,229 +46,374 @@
                 </div>
             </div>
         </nav>
-    </header>   
+    </header>
+    <br>
+    <br>
+    <!-- End of Header Section -->
 
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Main Content Start -->
+        <div class="container main-content">
+            <h2 class="section-title text-center mt-5">Lifestyles and Hobbies Courses</h2>
+            <!-- Filters Section -->
+            <div class="container my-4">
+                <h4>Filter Courses</h4>
+                <div class="row g-2">
+                    <div class="col-12 col-md-4">
+                        <select id="levelFilter" class="form-select">
+                            <option value="">All Levels</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <select id="tagFilter" class="form-select">
+                            <option value="">All Tags</option>
+                            <option value="New">New</option>
+                            <option value="Popular">Popular</option>
+                            <option value="Staff Pick">Staff Pick</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <select id="ratingFilter" class="form-select">
+                            <option value="">All Ratings</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="3">3+ Stars</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form class="d-flex w-100" role="search">
-                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
+            </div>
+
+    <!-- Courses Section -->
+    <div id="coursesContainer" class="row">
+        <!-- Course 1 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="New" data-rating="4.5">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/photography_for_beginners.webp" alt="Photography for Beginners" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-success">New</span>
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">Photography for Beginners</h3>
+                    <p class="course-info">900 students &bull; 3h 10m</p>
+                    <p class="course-instructor">Tutor: Alex Brown</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                        <span>4.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 2 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="Popular" data-rating="4.0">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/gardening_basics.webp" alt="Gardening Basics" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">Gardening Basics</h3>
+                    <p class="course-info">650 students &bull; 2h 20m</p>
+                    <p class="course-instructor">Tutor: Clara Green</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        <span>4.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 3 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="Popular" data-rating="4.7">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/cooking_fundamentals.webp" alt="Cooking Fundamentals" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-warning">Popular</span>
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">Cooking Fundamentals</h3>
+                    <p class="course-info">1,500 students &bull; 3h 40m</p>
+                    <p class="course-instructor">Tutor: Jamie Parker</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>4.7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 4 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Intermediate" data-tag="Popular" data-rating="4.0">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/interior_design_for_beginers.webp" alt="Interior Design for Beginners" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-primary">Intermediate</span>
+                    <h3 class="category-title">Interior Design for Beginners</h3>
+                    <p class="course-info">800 students &bull; 4h 15m</p>
+                    <p class="course-instructor">Tutor: Emily Wilson</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>4.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 5 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="Popular" data-rating="4.0">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/digital_art_with_tablets.webp" alt="Digital Art with Tablets" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-warning">Popular</span>
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">Digital Art with Tablets</h3>
+                    <p class="course-info">1,100 students &bull; 3h 20m</p>
+                    <p class="course-instructor">Tutor: Michael Lee</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        <span>4.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 6 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="New" data-rating="3.5">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/digital_art_with_tablets.webp" alt="DIY Crafts and Decorations" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-success">New</span>
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">DIY Crafts and Decorations</h3>
+                    <p class="course-info">400 students &bull; 2h 50m</p>
+                    <p class="course-instructor">Tutor: Sophie Adams</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        <span>3.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 7 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="Staff Pick" data-rating="4.0">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/calligraphy_and_hand_lettering.webp" alt="Calligraphy and Hand Lettering" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-info">Staff Pick</span>
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">Calligraphy and Hand Lettering</h3>
+                    <p class="course-info">700 students &bull; 2h 35m</p>
+                    <p class="course-instructor">Tutor: Rachel Collins</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>4.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 8 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Intermediate" data-tag="Popular" data-rating="4.2">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/calligraphy_and_hand_lettering.webp" alt="Music Production Essentials" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-warning">Popular</span>
+                    <span class="badge bg-primary">Intermediate</span>
+                    <h3 class="category-title">Music Production Essentials</h3>
+                    <p class="course-info">850 students &bull; 3h 50m</p>
+                    <p class="course-instructor">Tutor: Daniel Foster</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>4.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Course 9 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="category-card" data-level="Beginner" data-tag="Original" data-rating="4.3">
+                <img src="../images/imagesForCourses/lifestylesAndHobbies_page/travel_planning.webp" alt="Travel Planning and Budgeting" class="category-image">
+                <div class="text-container">
+                    <span class="badge bg-secondary">Original</span>
+                    <span class="badge bg-primary">Beginner</span>
+                    <h3 class="category-title">Travel Planning and Budgeting</h3>
+                    <p class="course-info">600 students &bull; 2h 45m</p>
+                    <p class="course-instructor">Tutor: Linda Walker</p>
+                    <div class="course-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                        <span>4.3</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+        <!-- Bootstrap Contact Tutor Modal -->
+        <div class="modal fade" id="contactTutorModal" tabindex="-1" aria-labelledby="contactTutorModalLabel" aria-hidden="true">
+            <!-- Modal Dialog Container -->
+            <div class="modal-dialog">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Modal Title -->
+                        <h5 class="modal-title" id="contactTutorModalLabel">Contact Tutor</h5>
+                        <!-- Close Button -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <!-- Tutor Name Display -->
+                        <p id="tutorName">Tutor: </p>
+                        <!-- Contact Form -->
+                        <form>
+                            <!-- Message Input -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message:</label>
+                                <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <!-- Send Button -->
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Contact Tutor Modal -->
+
+    <!-- Business and Finance Section -->
+    <div class="container text-center mt-5">
+        <!-- Section Title -->
+        <h2>Advance Your Business & Financial Knowledge</h2>
+        <!-- Description Text -->
+        <div class="text-content mx-auto" style="max-width: 700px;">
+            <p>
+                Step into the world of business and finance with courses that equip you for success. Tutord’s business and finance classes cover a range of essential topics, from financial markets and investment strategies to personal finance and digital marketing. Whether you’re a budding entrepreneur, a finance professional, or simply looking to manage your own finances more effectively, these classes will empower you with the skills and insights to make informed decisions and drive growth. Discover the tools, techniques, and strategies that can shape your career, and take a step closer to your financial and business goals with Tutord.
+            </p>
+        </div>
+    </div>
+    <!-- End of Business and Finance Section -->
+
     
-    <!-- Header End -->
-    <h1>Lifestyle & Hobbies Page</h1>
-
-    <div class="container main-content">
-        <h2 class="section-title text-center mt-5">Lifestyle & Hobbies Courses</h2>
-        <div class="row">
-
-            <!-- Course 1: Photography for Beginners -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/photography_for_beginners.webp" alt="Photography for Beginners" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-success">New</span>
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">Photography for Beginners</h3>
-                            <p class="course-info">900 students &bull; 3h 10m</p>
-                            <p class="course-instructor">Tutor: Alex Brown</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                                <span>4.5</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 2: Gardening Basics -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/gardening_basics.webp" alt="Gardening Basics" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">Gardening Basics</h3>
-                            <p class="course-info">650 students &bull; 2h 20m</p>
-                            <p class="course-instructor">Tutor: Clara Green</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                                <span>4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 3: Cooking Fundamentals -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/cooking_fundamentals.webp" alt="Cooking Fundamentals" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-warning">Popular</span>
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">Cooking Fundamentals</h3>
-                            <p class="course-info">1,500 students &bull; 3h 40m</p>
-                            <p class="course-instructor">Tutor: Jamie Parker</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                <span>4.7</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 4: Interior Design for Beginners -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/interior_design_for_beginers.webp" alt="Interior Design for Beginners" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-primary">Intermediate</span>
-                            <h3 class="category-title">Interior Design for Beginners</h3>
-                            <p class="course-info">800 students &bull; 4h 15m</p>
-                            <p class="course-instructor">Tutor: Emily Wilson</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                <span>4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 5: Digital Art with Tablets -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/digital_art_with_tablets.webp" alt="Digital Art with Tablets" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-warning">Popular</span>
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">Digital Art with Tablets</h3>
-                            <p class="course-info">1,100 students &bull; 3h 20m</p>
-                            <p class="course-instructor">Tutor: Michael Lee</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                                <span>4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 6: DIY Crafts and Decorations -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/digital_art_with_tablets.webp" alt="DIY Crafts and Decorations" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-success">New</span>
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">DIY Crafts and Decorations</h3>
-                            <p class="course-info">400 students &bull; 2h 50m</p>
-                            <p class="course-instructor">Tutor: Sophie Adams</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                                <span>3.5</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 7: Calligraphy and Hand Lettering -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/calligraphy_and_hand_lettering.webp" alt="Calligraphy and Hand Lettering" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-info">Staff Pick</span>
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">Calligraphy and Hand Lettering</h3>
-                            <p class="course-info">700 students &bull; 2h 35m</p>
-                            <p class="course-instructor">Tutor: Rachel Collins</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                <span>4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 8: Music Production Essentials -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/calligraphy_and_hand_lettering.webp" alt="Music Production Essentials" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-warning">Popular</span>
-                            <span class="badge bg-primary">Intermediate</span>
-                            <h3 class="category-title">Music Production Essentials</h3>
-                            <p class="course-info">850 students &bull; 3h 50m</p>
-                            <p class="course-instructor">Tutor: Daniel Foster</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                <span>4.2</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Course 9: Travel Planning and Budgeting -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <a href="#" class="category-link">
-                    <div class="category-card">
-                        <img src="../images/imagesForCourses/lifestylesAndHobbies_page/travel_planning_and_budgeting.webp" alt="Travel Planning and Budgeting" class="category-image">
-                        <div class="text-container">
-                            <span class="badge bg-secondary">Original</span>
-                            <span class="badge bg-primary">Beginner</span>
-                            <h3 class="category-title">Travel Planning and Budgeting</h3>
-                            <p class="course-info">600 students &bull; 2h 45m</p>
-                            <p class="course-instructor">Tutor: Linda Walker</p>
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                                <span>4.3</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-        </div>
+   <!-- Footer Section Start -->
+<footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+    <!-- Footer Links and Copyright -->
+    <p class="text-light">
+        &copy; 2024 Tutord. All rights reserved | 
+        <a href="../index.html" class="text-light">Home</a> | 
+        <a href="../courses.html" class="text-light">Courses</a> | 
+        <a href="../community.html" class="text-light">Community</a> | 
+        <a href="../profilePageLearner.html" class="text-light">Profile</a>
+    </p>
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element"></div>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+            <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+            <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+            <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
     </div>
+</footer>
+<!-- Footer Section End -->
 
+<!-- JavaScript Libraries and Frameworks -->
+<!-- Bootstrap JS and Popper.js for responsive behavior -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
+<!-- JavaScript for Navbar Auto-Close -->
+<script>
+    document.addEventListener('click', function(event) {
+        const navbar = document.getElementById('navbarNav');
+        const toggle = document.querySelector('.navbar-toggler');
 
+        // Close navbar if click occurs outside it and it is currently open
+        if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
+            if (navbar.classList.contains('show')) {
+                toggle.click();
+            }
+        }
+    });
+</script>
 
-    <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
-        <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="../index.html" class="text-light">Home</a> | <a href="../courses.html" class="text-light">Courses</a> | <a href="../community.html" class="text-light">Community</a> | <a href="../profilePageLearner.html" class="text-light">Profile</a></p>
-        <div id="google_translate_element"></div>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-    </footer>
+<!-- Google Translate Widget Script -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- JavaScript for Favorite Star Toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stars = document.querySelectorAll('.favorite-star');
+
+        // Toggle "favorited" class on click
+        stars.forEach(star => {
+            star.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent navigation effect
+                star.classList.toggle('favorited');
+            });
+        });
+    });
+</script>
+
+<!-- JavaScript for Course Filtering -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const coursesContainer = document.getElementById("coursesContainer");
+        const filters = {
+            level: document.getElementById("levelFilter"),
+            tag: document.getElementById("tagFilter"),
+            rating: document.getElementById("ratingFilter"),
+        };
+
+        const filterCourses = () => {
+            const levelValue = filters.level.value;
+            const tagValue = filters.tag.value;
+            const ratingValue = filters.rating.value ? parseFloat(filters.rating.value) : null;
+
+            const courses = coursesContainer.querySelectorAll(".category-card");
+
+            // Show or hide courses based on filter criteria
+            courses.forEach(course => {
+                const courseLevel = course.getAttribute("data-level");
+                const courseTag = course.getAttribute("data-tag");
+                const courseRating = parseFloat(course.getAttribute("data-rating"));
+
+                let isVisible = true;
+
+                if (levelValue && courseLevel !== levelValue) isVisible = false;
+                if (tagValue && courseTag !== tagValue) isVisible = false;
+                if (ratingValue && courseRating < ratingValue) isVisible = false;
+
+                course.parentElement.style.display = isVisible ? "block" : "none";
+            });
+        };
+
+        // Attach event listeners to filter dropdowns
+        Object.values(filters).forEach(filter => {
+            filter.addEventListener("change", filterCourses);
+        });
+
+        // Initial filter to display all courses
+        filterCourses();
+    });
+</script>
+
+<!-- JavaScript for Handling Tutor Modal -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactTutorModal = document.getElementById("contactTutorModal");
+        const tutorNameElem = document.getElementById("tutorName");
+
+        // Update modal content with tutor's name when triggered
+        contactTutorModal.addEventListener("show.bs.modal", function (event) {
+            const button = event.relatedTarget; // Button that triggered the modal
+            const tutorName = button.getAttribute("data-tutor"); // Get tutor name from data-tutor attribute
+            tutorNameElem.textContent = "Tutor: " + tutorName;
+        });
+    });
+</script>    
+    <!-- End of Main Content -->
 </body>
 </html>
