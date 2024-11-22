@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography Tips in Adobe Illustrator</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> <!-- Bootstrap for responsive layout -->
-    <link rel="stylesheet" href="\Group_project_15\styles\course.css"> <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="\Group_project_15\styles\checkout.css"> <!-- Custom stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts for Roboto -->
 </head>
 <body>
@@ -52,16 +52,47 @@
             </div>
         </nav>
     </header>
+    <div class="d-flex flex-row ">
+        <div class="p-2" id="checkout-text">
+            <h2>Checkout</h2>
+        </div>
+        <div>
+            <form class="form-group">
+                <label for="first-name">First Name:</label><br>
+                <input type="text" id="first-name" name="first-name"><br>
+                <label for="surname">Surname:</label><br>
+                <input type="text" id="surname" name="surname"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="surname">Surname:</label><br>
+                <input type="text" id="surname" name="surname"><br>
+                <label for="country">Country:</label><br>
+                <select class=".form-countries form-control" id="country" >
+                    <option value=""></option>
+                </select>
     
-    <div class="d-flex flex-row justify-content-center p-3 ">
-        <div class="d-flex">
-            <h2 class="course-text">Typography Tips in Adobe Illustrator</h2>
+            </form>
         </div>
-        <div class="img-thumbnail img-fluid"> 
-            <img src="\Group_project_15\images\imagesForCourses\art_page\illustration_techniques.webp" class="course-image" alt="course image">
-        </div>
-
     </div>
     
 </body>
+<!-- 'https://stackoverflow.com/questions/72268669/custom-dropdown-list-of-countries-using-the-api' -->
+
+
+<script>
+    const countryList = document.querySelector('.form-countries');
+
+    fetch('https://restcountries.com/v3.1/all').then(res => {
+    return res.json();
+    }).then(data => {
+    let output = '';
+    data.forEach(country => {
+        output += `<option value="${country.name.common}">${country.name.common}</option>`;
+        document.getElementById('country').innerHTML = output;
+    });
+    }).catch(err => {
+    console.log(err);
+    });
+
+</script>
 </html>
