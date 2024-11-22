@@ -411,6 +411,7 @@
 
 <!-- Form Validation -->
 <script>
+    
     document.addEventListener('DOMContentLoaded', function () {
         const signupButton = document.getElementById('signupButton');
         signupButton.addEventListener('click', function (event) {
@@ -445,7 +446,8 @@
                                 today.getDate() - dob.getDate() < 0)))
                 )
             ) {
-                event.preventDefault();
+            alert('Successfully signed up')
+            event.preventDefault();
                 dobError.style.display = 'block';
                 return;
             }

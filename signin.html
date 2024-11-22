@@ -130,7 +130,7 @@
                     </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" id="logInButton" type="button">Log
                         in</button>
                       <a class="text-muted" href="#!">Forgot password?</a>
                     </div>
@@ -206,5 +206,27 @@
       }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const signInButton = document.getElementById('logInButton');
+      signInButton.addEventListener('click', function(){
+        const password = document.getElementById('form2Example22').value;
+        const username = document.getElementById('form2Example11').value;
+        console.log(password)
+
+        if(username === 'learner12345@gmail.com' && password === 'password123!'){
+          alert('Sucessfully signed in as ', username)
+          window.location.replace("http://127.0.0.1:5500/index.html");
+        }
+        else{
+          alert("Wrong login")
+          
+        }
+
+      })
+      
+
+    })
+  </script>
 </body>
 </html>
