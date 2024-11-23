@@ -23,7 +23,7 @@
                 <div class="d-flex align-items-center me-auto">
                     <a class="navbar-brand" href="index.html">
                         <!-- Website logo -->
-                        <img src="images/logo.png" alt="" style="width: 140px;">
+                        <img src="images/logo.png" alt="" style="width: 80px;">
                     </a>
                     <!-- Search Button for Mobile -->
                     <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
@@ -65,6 +65,11 @@
         <h1>Welcome to Tutord</h1>
         <p>Your journey to learning starts here</p>
     </div>
+    <div class="text-center my-5">
+        <a href="courses.html" class="btn btn-outline-dark btn-lg me-2">Explore Courses</a>
+<a href="signin.html" class="btn btn-outline-dark btn-lg">Start Learning Now</a>
+
+    </div>
     
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
@@ -85,10 +90,10 @@
     </div>
     <!-- Search Modal End -->
 
-    <!-- Main Content Start -->
     <div class="main-content py-5" style="background-color: #f4f6f9;">
         <div class="container">
             <div class="row justify-content-center">
+                <!-- Sign-Up Section -->
                 <div class="col-md-6">
                     <div class="card shadow-sm p-4">
                         <h3 class="text-center mb-4 text-dark">Create Your Account</h3>
@@ -125,7 +130,6 @@
                                     style="top: 50%; transform: translateY(20%); right: 10px; cursor: pointer;">
                                     <i id="togglePasswordIcon" class="fas fa-eye"></i>
                                 </span>
-                                
                             </div>
                             <div id="password-strength" class="text-muted mt-1 pb-2"></div>
                             <!-- Confirm Password Input -->
@@ -158,7 +162,6 @@
                                     I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.
                                 </label>
                             </div>
-                            
                             <!-- Sign Up Button -->
                             <button type="submit" class="btn btn-primary btn-lg w-100 rounded-3" id="signupButton">Sign Up</button>
                         </form>
@@ -167,10 +170,147 @@
                         </p>
                     </div>
                 </div>
+                <!-- Testimonials Section -->
+                <div class="col-md-6">
+                    <h3 class="text-center mb-4">What Our Users Say</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <blockquote class="blockquote">
+                                <p>"Tutord helped me excel in my career!"</p>
+                                <footer class="blockquote-footer">Jane Doe, Learner</footer>
+                            </blockquote>
+                        </div>
+                        <div class="col-md-12">
+                            <blockquote class="blockquote">
+                                <p>"Connecting with learners has been amazing."</p>
+                                <footer class="blockquote-footer">John Smith, Tutor</footer>
+                            </blockquote>
+                        </div>
+                        <div class="col-md-12">
+                            <blockquote class="blockquote">
+                                <p>"Best platform for learning new skills."</p>
+                                <footer class="blockquote-footer">Emily Brown, Learner</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+     
     <!-- Main Content End -->
+
+    <div class="container my-5">
+        <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        What is Tutord?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1">
+                    <div class="accordion-body">
+                        Tutord is a skill-sharing platform where learners and tutors connect to share knowledge through courses, workshops, and one-on-one sessions.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        How do I find courses?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2">
+                    <div class="accordion-body">
+                        Use the search bar at the top of the page to search for courses by topic, skill, or tutor. You can also browse our Courses page for recommendations.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        What does being a tutor involve?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3">
+                    <div class="accordion-body">
+                        As a tutor, you can create courses, offer one-on-one mentorship, and share your expertise with learners worldwide. Tutord provides tools to help you manage and promote your lessons.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Is Tutord free to use?
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4">
+                    <div class="accordion-body">
+                        Yes, signing up and exploring basic features are free. Some courses may require a fee, depending on the tutor's pricing.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        How can I contact a tutor?
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5">
+                    <div class="accordion-body">
+                        You can contact tutors through the messaging feature on their profile or through the course discussion forums.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        Can I become a tutor on Tutord?
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6">
+                    <div class="accordion-body">
+                        Yes! If you're 16 years or older and have expertise in a subject, you can sign up as a tutor and start creating courses.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 7 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        How do I track my learning progress?
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7">
+                    <div class="accordion-body">
+                        Your progress is tracked automatically on the platform. You can view your completed lessons, certifications, and goals in your learner profile.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 8 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        How secure is my personal information?
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8">
+                    <div class="accordion-body">
+                        We take privacy seriously. Your personal information is protected with industry-standard encryption and is never shared without your consent. Refer to our <a href="privacy.html" target="_blank">Privacy Policy</a> for details.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <!-- Footer Start -->
     <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
@@ -271,6 +411,7 @@
 
 <!-- Form Validation -->
 <script>
+    
     document.addEventListener('DOMContentLoaded', function () {
         const signupButton = document.getElementById('signupButton');
         signupButton.addEventListener('click', function (event) {
@@ -305,7 +446,8 @@
                                 today.getDate() - dob.getDate() < 0)))
                 )
             ) {
-                event.preventDefault();
+            alert('Successfully signed up')
+            event.preventDefault();
                 dobError.style.display = 'block';
                 return;
             }

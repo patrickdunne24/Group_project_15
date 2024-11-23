@@ -8,34 +8,38 @@
   <!-- Latest compiled and minified CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Our Styles-->
-  <link rel="stylesheet" href="styles/profile.css">
+  <link rel="stylesheet" href="styles/signin.css">
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-  <!-- Header Start -->
-    <!-- Header Start -->
     <!-- Header Start -->
     <header class="header-area">
+      <!-- Navigation Bar -->
       <nav class="navbar navbar-expand-xl navbar-light bg-light">
           <div class="container-fluid d-flex align-items-center">
+              <!-- Logo and Search Bar -->
               <div class="d-flex align-items-center me-auto">
                   <a class="navbar-brand" href="index.html">
-                      <img src="images/logo.png" alt="" style="width: 140px;">
+                      <!-- Website logo -->
+                      <img src="images/logo.png" alt="" style="width: 80px;">
                   </a>
+                  <!-- Search Button for Mobile -->
                   <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
-                      <i class="fas fa-search"></i>
+                      <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
                   </button>
+                  <!-- Search Form for Desktop -->
                   <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
-                      <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                      <button class="btn btn-outline-dark" type="submit">Search</button>
+                      <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search"> <!-- Input field -->
+                      <button class="btn btn-outline-dark" type="submit">Search</button> <!-- Search button -->
                   </form>
               </div>
-              <!-- Navbar Links -->
+              <!-- Navbar Links and Buttons -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span> <!-- Mobile navigation toggle icon -->
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <!-- Navbar Links -->
                   <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                       <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
@@ -43,6 +47,7 @@
                       <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
                       <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
                   </ul>
+                  <!-- Sign In and Sign Up Buttons -->
                   <div class="d-flex ms-3">
                       <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
                       <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
@@ -51,6 +56,27 @@
           </div>
       </nav>
   </header>   
+  <!-- Header End -->
+
+  <!-- Search Modal Start -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content bg-dark text-white">
+              <!-- Modal Header with Close Button -->
+              <div class="modal-header border-0">
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal Body with Search Form -->
+              <div class="modal-body">
+                  <form class="d-flex w-100" role="search">
+                      <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                      <button class="btn btn-outline-light" type="submit">Search</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Search Modal End -->
 
   <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
@@ -69,7 +95,12 @@
   </div>
   
     <!-- Header End -->
-     
+    <br> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Start of SignIn section-->
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -99,7 +130,7 @@
                     </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" id="logInButton" type="button">Log
                         in</button>
                       <a class="text-muted" href="#!">Forgot password?</a>
                     </div>
@@ -175,5 +206,27 @@
       }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const signInButton = document.getElementById('logInButton');
+      signInButton.addEventListener('click', function(){
+        const password = document.getElementById('form2Example22').value;
+        const username = document.getElementById('form2Example11').value;
+        console.log(password)
+
+        if(username === 'learner12345@gmail.com' && password === 'password123!'){
+          alert('Sucessfully signed in as ', username)
+          window.location.replace("http://127.0.0.1:5500/index.html");
+        }
+        else{
+          alert("Wrong login")
+          
+        }
+
+      })
+      
+
+    })
+  </script>
 </body>
 </html>

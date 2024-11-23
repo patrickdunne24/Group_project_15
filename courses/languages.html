@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Health & Fitness</title>
 
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> languages page</h1>
-
-    <!-- Header Start -->
+    <!-- Header Section Start -->
     <header class="header-area">
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
             <div class="container-fluid d-flex align-items-center">
@@ -29,7 +28,6 @@
                         <button class="btn btn-outline-dark" type="submit">Search</button>
                     </form>
                 </div>
-                <!-- Navbar Links -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,36 +46,50 @@
                 </div>
             </div>
         </nav>
-    </header>   
+    </header>
+    <br>
+    <br>
+    <!-- End of Header Section -->
 
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Main Content Start -->
+    <div class="container main-content">
+        <h2 class="section-title text-center mt-5">Languages Courses</h2>
+        <!-- Filters Section -->
+        <div class="container my-4">
+            <h4>Filter Courses</h4>
+            <div class="row g-2">
+                <div class="col-12 col-md-4">
+                    <select id="levelFilter" class="form-select">
+                        <option value="">All Levels</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
                 </div>
-                <div class="modal-body">
-                    <form class="d-flex w-100" role="search">
-                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
+                <div class="col-12 col-md-4">
+                    <select id="tagFilter" class="form-select">
+                        <option value="">All Tags</option>
+                        <option value="New">New</option>
+                        <option value="Popular">Popular</option>
+                        <option value="Staff Pick">Staff Pick</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4">
+                    <select id="ratingFilter" class="form-select">
+                        <option value="">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                    </select>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Header End -->
 
-<h1>Language Courses Page</h1>
-
-<div class="container main-content">
-    <h2 class="section-title text-center mt-5">Language Courses</h2>
-    <div class="row">
-
-        <!-- Course 1: Introductory Japanese -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+        <!-- Courses Section -->
+        <div id="coursesContainer" class="row">
+            <!-- Course 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="New" data-rating="4.5">
                     <img src="../images/imagesForCourses/languages_page/introductory_japanese.webp" alt="Introductory Japanese" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-success">New</span>
@@ -91,13 +103,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 2: Conversational Spanish -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="Popular" data-rating="4.0">
                     <img src="../images/imagesForCourses/languages_page/conversational_spanish.webp" alt="Conversational Spanish" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-primary">Beginner</span>
@@ -110,13 +119,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 3: French for Travelers -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="Popular" data-rating="4.5">
                     <img src="../images/imagesForCourses/languages_page/french_for_travelers.webp" alt="French for Travelers" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-warning">Popular</span>
@@ -130,13 +136,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 4: Intermediate German Grammar and Writing -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 4 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="Popular" data-rating="4.0">
                     <img src="../images/imagesForCourses/languages_page/intermediate_german.webp" alt="Intermediate German Grammar and Writing" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-primary">Intermediate</span>
@@ -149,13 +152,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 5: Mandarin Chinese: Tones and Pronunciation -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 5 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="New" data-rating="4.0">
                     <img src="../images/imagesForCourses/languages_page/mandarin_tones.webp" alt="Mandarin Chinese: Tones and Pronunciation" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-primary">Intermediate</span>
@@ -168,33 +168,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 6: Arabic Script and Reading -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
-                    <img src="../images/imagesForCourses/languages_page/arabic_script.webp" alt="Arabic Script and Reading" class="category-image">
-                    <div class="text-container">
-                        <span class="badge bg-success">New</span>
-                        <span class="badge bg-primary">Beginner</span>
-                        <h3 class="category-title">Arabic Script and Reading</h3>
-                        <p class="course-info">320 students &bull; 1h 10m</p>
-                        <p class="course-instructor">Tutor: Ahmed Ali</p>
-                        <div class="course-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                            <span>3.5</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Course 7: Korean for Beginners: Hangeul and Basic Phrases -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 6 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="Staff Pick" data-rating="4.0">
                     <img src="../images/imagesForCourses/languages_page/korean_hangeul.webp" alt="Korean for Beginners: Hangeul and Basic Phrases" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-info">Staff Pick</span>
@@ -208,13 +185,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 8: Portuguese Culture and Conversation -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 7 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="Popular" data-rating="4.0">
                     <img src="../images/imagesForCourses/languages_page/portuguese_culture.webp" alt="Portuguese Culture and Conversation" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-warning">Popular</span>
@@ -228,13 +202,10 @@
                         </div>
                     </div>
                 </div>
-            </a>
-        </div>
-
-        <!-- Course 9: Russian for Intermediate Learners: Vocabulary Expansion -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <a href="#" class="category-link">
-                <div class="category-card">
+            </div>
+            <!-- Course 8 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Intermediate" data-tag="Original" data-rating="4.5">
                     <img src="../images/imagesForCourses/languages_page/russian_intermediate.webp" alt="Russian for Intermediate Learners: Vocabulary Expansion" class="category-image">
                     <div class="text-container">
                         <span class="badge bg-secondary">Original</span>
@@ -248,28 +219,208 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
+            <!-- Course 9 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="category-card" data-level="Beginner" data-tag="Staff Pick" data-rating="4.5">
+                    <img src="../images/imagesForCourses/languages_page/arabic_script.webp" alt="Building a Sustainable Fitness Routine" class="category-image">
+                    <div class="text-container">
+                        <span class="badge bg-info">Staff Pick</span>
+                        <span class="badge bg-primary">Beginner</span>
+                        <h3 class="category-title">Arabic Scripts Expanded </h3>
+                        <p class="course-info">230 
+                            <p class="course-info">320 students &bull; 1h 10m</p>
+                            <p class="course-instructor">Tutor: Ahmed Ali</p>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                <span>3.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+
+
+
+        <!-- Bootstrap Contact Tutor Modal -->
+        <div class="modal fade" id="contactTutorModal" tabindex="-1" aria-labelledby="contactTutorModalLabel" aria-hidden="true">
+            <!-- Modal Dialog Container -->
+            <div class="modal-dialog">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Modal Title -->
+                        <h5 class="modal-title" id="contactTutorModalLabel">Contact Tutor</h5>
+                        <!-- Close Button -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <!-- Tutor Name Display -->
+                        <p id="tutorName">Tutor: </p>
+                        <!-- Contact Form -->
+                        <form>
+                            <!-- Message Input -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message:</label>
+                                <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <!-- Send Button -->
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- End of Contact Tutor Modal -->
 
+    <!-- Business and Finance Section -->
+    <div class="container text-center mt-5">
+        <!-- Section Title -->
+        <h2>Advance Your Business & Financial Knowledge</h2>
+        <!-- Description Text -->
+        <div class="text-content mx-auto" style="max-width: 700px;">
+            <p>
+                Step into the world of business and finance with courses that equip you for success. Tutord’s business and finance classes cover a range of essential topics, from financial markets and investment strategies to personal finance and digital marketing. Whether you’re a budding entrepreneur, a finance professional, or simply looking to manage your own finances more effectively, these classes will empower you with the skills and insights to make informed decisions and drive growth. Discover the tools, techniques, and strategies that can shape your career, and take a step closer to your financial and business goals with Tutord.
+            </p>
+        </div>
     </div>
-</div>
+    <!-- End of Business and Finance Section -->
 
-<!-- Footer -->
+    
+   <!-- Footer Section Start -->
 <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
-    <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="../index.html" class="text-light">Home</a> | <a href="../courses.html" class="text-light">Courses</a> | <a href="../community.html" class="text-light">Community</a> | <a href="../profilePageLearner.html" class="text-light">Profile</a></p>
+    <!-- Footer Links and Copyright -->
+    <p class="text-light">
+        &copy; 2024 Tutord. All rights reserved | 
+        <a href="../index.html" class="text-light">Home</a> | 
+        <a href="../courses.html" class="text-light">Courses</a> | 
+        <a href="../community.html" class="text-light">Community</a> | 
+        <a href="../profilePageLearner.html" class="text-light">Profile</a>
+    </p>
+    <!-- Google Translate Widget -->
     <div id="google_translate_element"></div>
+    <!-- Social Media Icons -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-          <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
         </a>
         <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-          <i class="fab fa-twitter"></i>
+            <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
         </a>
         <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
-          <i class="fab fa-instagram"></i>
+            <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
         </a>
-      </div>
+    </div>
 </footer>
+<!-- Footer Section End -->
 
+<!-- JavaScript Libraries and Frameworks -->
+<!-- Bootstrap JS and Popper.js for responsive behavior -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for Navbar Auto-Close -->
+<script>
+    document.addEventListener('click', function(event) {
+        const navbar = document.getElementById('navbarNav');
+        const toggle = document.querySelector('.navbar-toggler');
+
+        // Close navbar if click occurs outside it and it is currently open
+        if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
+            if (navbar.classList.contains('show')) {
+                toggle.click();
+            }
+        }
+    });
+</script>
+
+<!-- Google Translate Widget Script -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- JavaScript for Favorite Star Toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stars = document.querySelectorAll('.favorite-star');
+
+        // Toggle "favorited" class on click
+        stars.forEach(star => {
+            star.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent navigation effect
+                star.classList.toggle('favorited');
+            });
+        });
+    });
+</script>
+
+<!-- JavaScript for Course Filtering -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const coursesContainer = document.getElementById("coursesContainer");
+        const filters = {
+            level: document.getElementById("levelFilter"),
+            tag: document.getElementById("tagFilter"),
+            rating: document.getElementById("ratingFilter"),
+        };
+
+        const filterCourses = () => {
+            const levelValue = filters.level.value;
+            const tagValue = filters.tag.value;
+            const ratingValue = filters.rating.value ? parseFloat(filters.rating.value) : null;
+
+            const courses = coursesContainer.querySelectorAll(".category-card");
+
+            // Show or hide courses based on filter criteria
+            courses.forEach(course => {
+                const courseLevel = course.getAttribute("data-level");
+                const courseTag = course.getAttribute("data-tag");
+                const courseRating = parseFloat(course.getAttribute("data-rating"));
+
+                let isVisible = true;
+
+                if (levelValue && courseLevel !== levelValue) isVisible = false;
+                if (tagValue && courseTag !== tagValue) isVisible = false;
+                if (ratingValue && courseRating < ratingValue) isVisible = false;
+
+                course.parentElement.style.display = isVisible ? "block" : "none";
+            });
+        };
+
+        // Attach event listeners to filter dropdowns
+        Object.values(filters).forEach(filter => {
+            filter.addEventListener("change", filterCourses);
+        });
+
+        // Initial filter to display all courses
+        filterCourses();
+    });
+</script>
+
+<!-- JavaScript for Handling Tutor Modal -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactTutorModal = document.getElementById("contactTutorModal");
+        const tutorNameElem = document.getElementById("tutorName");
+
+        // Update modal content with tutor's name when triggered
+        contactTutorModal.addEventListener("show.bs.modal", function (event) {
+            const button = event.relatedTarget; // Button that triggered the modal
+            const tutorName = button.getAttribute("data-tutor"); // Get tutor name from data-tutor attribute
+            tutorNameElem.textContent = "Tutor: " + tutorName;
+        });
+    });
+</script>    
+    <!-- End of Main Content -->
 </body>
 </html>
+    
