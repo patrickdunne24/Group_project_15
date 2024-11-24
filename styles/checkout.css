@@ -1,0 +1,17 @@
+#country:hover{
+    opacity: 75%;
+
+}
+#checkout-form{
+    margin: 10px;
+    
+}
+#checkout-text{
+    text-align:center
+}
+#overview{
+    border-radius: 25%;
+    border-color: black;
+    
+}
+
