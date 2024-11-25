@@ -153,32 +153,39 @@
         <div class="discussion-section">
 
             <!-- Start a Discussion Section -->
-            <div class="add-discussion-form">
-                <h3>Start a Discussion</h3>
-                <form>
-                    <div class="mb-3">
-                        <label for="course" class="form-label">Select Course</label>
-                        <select class="form-select" id="course" required>
-                            <option value="" disabled selected>Select a Course</option>
-                            <option value="business-finance">Business and Finance</option>
-                            <option value="cooking">Cooking</option>
-                            <option value="creative-arts">Creative Arts and Design</option>
-                            <option value="general-qa">General Q&A</option>
-                            <option value="health-fitness">Health and Fitness</option>
-                            <option value="languages">Languages</option>
-                            <option value="lifestyle-hobbies">Lifestyle and Hobbies</option>
-                            <option value="personal-development">Personal Development</option>
-                            <option value="tech-dev">Technology and Development</option>
-                            <option value="test-prep">Test Preparation</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="discussion-topic" class="form-label">Your Topic/Question</label>
-                        <input type="text" class="form-control" id="discussion-topic" placeholder="Ask a question or start a discussion..." required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Start Discussion</button>
-                </form>
-            </div>
+<!-- Start a Discussion Section -->
+<div class="add-discussion-form">
+    <h3>Start a Discussion</h3>
+    <form>
+        <div class="mb-3">
+            <label for="course" class="form-label">Select Course</label>
+            <select class="form-select" id="course" required>
+                <option value="" disabled selected>Select a Course</option>
+                <option value="business-finance">Business and Finance</option>
+                <option value="cooking">Cooking</option>
+                <option value="creative-arts">Creative Arts and Design</option>
+                <option value="general-qa">General Q&A</option>
+                <option value="health-fitness">Health and Fitness</option>
+                <option value="languages">Languages</option>
+                <option value="lifestyle-hobbies">Lifestyle and Hobbies</option>
+                <option value="personal-development">Personal Development</option>
+                <option value="tech-dev">Technology and Development</option>
+                <option value="test-prep">Test Preparation</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="discussion-title" class="form-label">Discussion Title</label>
+            <input type="text" class="form-control" id="discussion-title" placeholder="Enter a title for your discussion..." required>
+        </div>
+        <div class="mb-3">
+            <label for="discussion-topic" class="form-label">Your Topic/Question</label>
+            <textarea class="form-control" id="discussion-topic" rows="3" placeholder="Ask a question or start a discussion..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Start Discussion</button>
+    </form>
+</div>
+
+
 
             <!-- Business and Finance Forum -->
             <div id="business-finance">
@@ -336,4 +343,133 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
 </body>
+<script>
+    // Attach event listeners to all reply buttons
+    document.addEventListener('DOMContentLoaded', () => {
+        const replyButtons = document.querySelectorAll('.reply-button');
+
+        replyButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const parent = event.target.closest('.reply-section');
+
+                // Check if the reply box already exists
+                if (!parent.querySelector('.reply-form')) {
+                    // Create a reply form dynamically
+                    const replyForm = document.createElement('div');
+                    replyForm.classList.add('reply-form', 'mt-3');
+
+                    replyForm.innerHTML = `
+                        <textarea class="form-control mb-2" rows="3" placeholder="Write your reply here..."></textarea>
+                        <button class="btn btn-primary btn-sm submit-reply">Submit Reply</button>
+                    `;
+
+                    parent.appendChild(replyForm);
+
+                    // Add event listener to the submit button
+                    const submitReplyButton = replyForm.querySelector('.submit-reply');
+                    submitReplyButton.addEventListener('click', () => {
+                        const replyText = replyForm.querySelector('textarea').value.trim();
+                        
+                        if (replyText) {
+                            // Create a new reply element
+                            const newReply = document.createElement('p');
+                            newReply.innerHTML = `<strong>You:</strong> ${replyText}`;
+                            parent.insertBefore(newReply, replyForm);
+
+                            // Clear the reply box
+                            replyForm.querySelector('textarea').value = '';
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+//start a discussion script
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.add-discussion-form form');
+
+    // Handle form submission
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get input values
+        const course = document.getElementById('course').value;
+        const title = document.getElementById('discussion-title').value.trim();
+        const topic = document.getElementById('discussion-topic').value.trim();
+
+        // Validate inputs
+        if (!course || !title || !topic) {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        // Find the appropriate course forum section by ID
+        const forumSection = document.getElementById(course);
+
+        if (!forumSection) {
+            alert('Invalid course selection.');
+            return;
+        }
+
+        // Create a new discussion card
+        const discussionCard = document.createElement('div');
+        discussionCard.classList.add('discussion-card', 'mt-4'); // Add CSS classes for styling
+
+        discussionCard.innerHTML = `
+            <div class="discussion-title">${title} <small>- <strong>You</strong></small></div>
+            <p>${topic}</p>
+            <div class="reply-section">
+                <button class="btn btn-secondary reply-button">Reply</button>
+            </div>
+        `;
+
+        // Append the new discussion card to the selected course's section
+        forumSection.appendChild(discussionCard);
+
+        // Reset the form after submission
+        form.reset();
+    });
+
+    // Event delegation for dynamically added Reply buttons
+    document.querySelector('.discussion-section').addEventListener('click', (event) => {
+        if (event.target.classList.contains('reply-button')) {
+            const parent = event.target.closest('.reply-section');
+
+            // Check if the reply box already exists
+            if (!parent.querySelector('.reply-form')) {
+                // Create a reply form dynamically
+                const replyForm = document.createElement('div');
+                replyForm.classList.add('reply-form', 'mt-3');
+
+                replyForm.innerHTML = `
+                    <textarea class="form-control mb-2" rows="3" placeholder="Write your reply here..."></textarea>
+                    <button class="btn btn-primary btn-sm submit-reply">Submit Reply</button>
+                `;
+
+                parent.appendChild(replyForm);
+
+                // Add event listener to the submit button
+                const submitReplyButton = replyForm.querySelector('.submit-reply');
+                submitReplyButton.addEventListener('click', () => {
+                    const replyText = replyForm.querySelector('textarea').value.trim();
+
+                    if (replyText) {
+                        // Create a new reply element
+                        const newReply = document.createElement('p');
+                        newReply.innerHTML = `<strong>You:</strong> ${replyText}`;
+                        parent.insertBefore(newReply, replyForm);
+
+                        // Clear the reply box
+                        replyForm.querySelector('textarea').value = '';
+                    }
+                });
+            }
+        }
+    });
+});
+</script>
+
 </html>

@@ -17,24 +17,68 @@ html, body {
     position: fixed;
     top: 100px; /* Keeps it below the header */
     left: 0;
-    width: 200px;
+    width: 240px; /* Increased width for better visibility */
     background-color: #f8f9fa;
     padding-top: 20px;
-    height: calc(100vh - 100px); /* Adjusted height to exclude the header */
+    padding-bottom: 20px; /* Added padding at the bottom for spacing */
+    height: calc(100vh - 120px); /* Reduced height to lift the navigation above the bottom */
     padding-left: 10px;
+    padding-right: 10px; /* Added padding for better layout */
     z-index: 100;
     overflow-y: auto; /* Enables scrolling for overflowing content */
     border-right: 1px solid #ddd; /* Optional: visual separation */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better aesthetics */
+}
+
+.content-nav::-webkit-scrollbar {
+    width: 8px; /* Adjust width of the scrollbar */
+}
+
+.content-nav::-webkit-scrollbar-thumb {
+    background-color: #6c757d; /* Scrollbar thumb color */
+    border-radius: 4px; /* Rounded corners for scrollbar thumb */
+}
+
+.content-nav::-webkit-scrollbar-track {
+    background-color: #f8f9fa; /* Scrollbar track color */
 }
 
 .content-nav .btn-course {
     display: block;
     margin-bottom: 15px;
-    width: 180px;
+    width: 100%; /* Adjusted to match new width */
+    text-align: left; /* Aligns text for a cleaner layout */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+    position: relative; /* Needed for hover effects */
+    background-color: #007bff; /* Default button background */
+    color: white; /* Button text color */
+    border: none; /* Removes border for cleaner look */
+    padding: 10px; /* Increases button padding for better accessibility */
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+    z-index: 0; /* Ensure normal stacking order */
+}
+
+/* Ensure full visibility on hover */
+.content-nav .btn-course:hover {
+    white-space: normal; /* Allows text to wrap */
+    background-color: #0056b3; /* Darker blue for better contrast */
+    color: #ffffff; /* Ensures text remains visible */
+    z-index: 200; /* Ensures the hover text appears above other elements */
+    padding: 10px; /* Keeps padding consistent */
+    position: relative;
+    overflow: visible; /* Ensures text is visible even if it extends beyond the container */
+}
+
+/* Adjust scrolling to reveal full button on hover */
+.content-nav:hover {
+    overflow-y: auto; /* Enables scrolling if content exceeds visible area */
 }
 
 .discussion-section {
-    margin-left: 220px;
+    margin-left: 260px; /* Adjusted to match the new navigation width */
     flex-grow: 1;
     padding: 0 30px;
     padding-bottom: 60px; /* Prevent footer from overlapping */
@@ -48,4 +92,31 @@ html, body {
     color: white;
     padding: 15px 0;
     border-top: 2px solid white;
+    .add-discussion-form input[type="text"],
+.add-discussion-form textarea,
+.add-discussion-form select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-discussion-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.add-discussion-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.add-discussion-form button {
+    margin-top: 15px;
+}
+
+}
+#new-discussions .discussion-card {
+    margin-top: 20px;
 }
