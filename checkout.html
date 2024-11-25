@@ -61,12 +61,15 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid">
+    <div class="container-fluid" id="main-container">
         <div class="p-2">
             <h2 id="checkout-text">Checkout</h2>
         </div>
-        <div class="row align-items-center">
-            <div class="col">
+        <div class="row align-items-start justify-content-center m-5">
+            
+            <div class="col-md-4">
+                <h4 class="">Personal Information</h4>
+                <div class="bg-light mt-4" id="billingaddress">
                 <form class="form-group" id="checkout-form">
                     <div class="row align-items-center">
                         <div class="col-sm-2">
@@ -144,7 +147,7 @@
                             <input class="form-control" type="text" id="postcode" name="postcode"><br>
                         </div>
                         <div class="form-group col">
-                            <label for="Town">Town:</label><br>
+                            <label for="town">Town:</label><br>
                             <input class="form-control" type="text" id="town" name="town"><br>
                         </div>
                         <div class="form-group col">
@@ -154,22 +157,26 @@
                     </div>
                 </form>
             </div>
-            <div class="col p-2">
-                <div class="d-flex row bg-light" id="overview">
-                    <div class="p-2 me-auto">
+            <div>
+                <fo</form>
+            </div>
+            </div>
+            <div class="col-sm-2">
+                <h4>Cart</h4>
+                <div class="d-flex row bg-light mt-4" id="overview">
+                    <div class="text-align-centers">
                         <p>Your Order</p>
-                        <p></p>
+                    </div>
+                    <div class="mr-2">
+                        <p>Typography Tips in Adobe Illustrator</p>
+                    </div>
+                    <div class="mr-2">
+                        <p class="text-end">Total: 12.99</p>
                     </div>
                 </div>
-                <form id="payment-form">
-                    <div class="row align-items-start">
-                        <div class="form-group">
-                            <label for="cardnumber">Card Number:</label> <br>
-                            <input class="form-control"type="text">
-
-                        </div>
-                    </div>
-                </form>
+                <div class="m-2">
+                    <button class="btn-lg btn-primary btn align-items-center" id="checkoutbutton"type="submit">Checkout</button>
+                </div>
             </div>
 
         </div>
@@ -182,6 +189,21 @@
 
 </body>
 <!-- 'https://stackoverflow.com/questions/72268669/custom-dropdown-list-of-countries-using-the-api' -->
+<footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+    <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-light">Home</a> | <a href="courses.html" class="text-light">Courses</a> | <a href="community.html" class="text-light">Community</a> | <a href="profilePageLearner.html" class="text-light">Profile</a></p>
+    <div id="google_translate_element"></div>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+</footer>
 
 
 <script>
@@ -201,17 +223,27 @@
 
 </script>
 <script>
-    const selector = document.getElementById('country')
-    const phonenumber = document.getElementById('phonenumber')
-    selector.addEventListener("change", () => {
-        fetch("https://restcountries.com/v3.1/name/germany").then(res => {
-            return res.json()
-        }).then(data2 => {
-            phonenumber.value = data2.idd.root
-        }).catch(err => {
-            console.log(err)
-        })
+    const townList = document.querySelector('.form-towns');
 
+    fetch('https://towns.online-tech.co.uk/api/v1/towns').then(res => {
+        return res.json();
+    }).then(data => {
+        let output = '';
+        data.forEach(town => {
+            output += `<option value="${town.name_1}">${town.name_1}</option>`;
+            document.getElementById('town').innerHTML = output;
+        });
+    }).catch(err => {
+        console.log(err);
+    });
+
+</script>
+
+<script>
+    const checkoutButton = document.getElementById('checkoutbutton')
+
+    checkoutButton.addEventListener('click', function (event) {
+        
     })
 </script>
 

@@ -3,15 +3,22 @@
 
 }
 #checkout-form{
-    margin: 10px;
+    margin:10px;
     
 }
 #checkout-text{
     text-align:center
 }
 #overview{
-    border-radius: 25%;
-    border-color: black;
+    border-radius: 25px;
+    margin-left: 5px
     
+}
+#main-container{
+    margin-left: 2em;
+    margin-right: 5em;
+}
+#billingaddress{
+    border-radius: 25px;
 }
 
