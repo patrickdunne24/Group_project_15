@@ -34,3 +34,45 @@
 .social-icon:hover i {
     color: blue;
 }
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the top of the left and right sections */
+    gap: 20px; /* Space between the two sections */
+}
+
+.left-content {
+    flex: 1; /* Make it take up remaining space */
+    position: relative; /* Ensure independent positioning */
+}
+
+.right-content {
+    flex-shrink: 0; /* Prevent it from resizing */
+    width: 45%; /* Fixed width for the right box */
+}
+
+.profile-section img {
+    display: block;
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+.name-and-details {
+    margin-bottom: 20px; /* Spacing below the name and details */
+}
+
+.service-selection {
+    margin-top: 20px; /* Spacing above the service selection */
+}
+
+.btn-group {
+    margin-top: 20px; /* Spacing above the buttons */
+}
+
+/* Ensure the right box remains visually distinct */
+.right-content .container2 {
+    position: sticky;
+    top: 20px; /* Ensures the box stays at the top of the viewport when scrolling */
+}
+
