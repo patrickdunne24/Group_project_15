@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
+    padding-top: 100px; /* Ensures header doesn't overlap */
+    flex-direction: column; /* Ensures the footer sticks to the bottom of the container */
+    padding-bottom: 60px; /* Added to ensure no overlap with the footer */
+}
+
+.content-nav {
+    position: fixed;
+    top: 100px; /* Keeps it below the header */
+    left: 0;
+    width: 200px;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    height: calc(100vh - 100px); /* Adjusted height to exclude the header */
+    padding-left: 10px;
+    z-index: 100;
+    overflow-y: auto; /* Enables scrolling for overflowing content */
+    border-right: 1px solid #ddd; /* Optional: visual separation */
+}
+
+.content-nav .btn-course {
+    display: block;
+    margin-bottom: 15px;
+    width: 180px;
+}
+
+.discussion-section {
+    margin-left: 220px;
+    flex-grow: 1;
+    padding: 0 30px;
+    padding-bottom: 60px; /* Prevent footer from overlapping */
+}
+
+.footer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    border-top: 2px solid white;
+}

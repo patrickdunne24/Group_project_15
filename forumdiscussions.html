@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Discussion Page</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/forumdiscussions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-top: 100px; /* Ensure header doesn't overlap */
+        }
+
+        .content-nav {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 200px;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+            height: 100vh;
+            padding-left: 10px;
+            z-index: 100;
+        }
+        
+        .content-nav .btn-course {
+            display: block;
+            margin-bottom: 15px;
+            width: 180px;
+        }
+
+        .discussion-section {
+            margin-left: 220px;
+            flex-grow: 1;
+            padding: 0 30px;
+        }
+
+        .discussion-card {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .discussion-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .reply-section {
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #ddd;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .discussion-list {
+            margin-left: 50px;
+        }
+
+        .add-discussion button {
+            width: 200px;
+        }
+
+        .add-discussion-form {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .reply-button {
+            margin-top: 10px;
+        }
+
+        .discussion-footer {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Start -->
+    <header class="header-area">
+        <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container-fluid d-flex align-items-center">
+                <div class="d-flex align-items-center me-auto">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="" style="width: 80px;">
+                    </a>
+                    <button class="btn btn-outline-dark d-xl-none ms-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                        <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>   
+
+    <!-- Main Content Start -->
+    <div class="container main-content py-5">
+        
+        <!-- Content Navigation Section (Vertical) -->
+        <div class="content-nav">
+            <a href="#business-finance" class="btn btn-primary btn-course">Business and Finance</a>
+            <a href="#cooking" class="btn btn-primary btn-course">Cooking</a>
+            <a href="#creative-arts" class="btn btn-primary btn-course">Creative Arts and Design</a>
+            <a href="#general-qa" class="btn btn-primary btn-course">General Q&A</a>
+            <a href="#health-fitness" class="btn btn-primary btn-course">Health and Fitness</a>
+            <a href="#languages" class="btn btn-primary btn-course">Languages</a>
+            <a href="#lifestyle-hobbies" class="btn btn-primary btn-course">Lifestyle and Hobbies</a>
+            <a href="#personal-development" class="btn btn-primary btn-course">Personal Development</a>
+            <a href="#tech-dev" class="btn btn-primary btn-course">Technology and Development</a>
+            <a href="#test-prep" class="btn btn-primary btn-course">Test Preparation</a>
+        </div>
+
+        <!-- Discussion Section -->
+        <div class="discussion-section">
+
+            <!-- Start a Discussion Section -->
+            <div class="add-discussion-form">
+                <h3>Start a Discussion</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="course" class="form-label">Select Course</label>
+                        <select class="form-select" id="course" required>
+                            <option value="" disabled selected>Select a Course</option>
+                            <option value="business-finance">Business and Finance</option>
+                            <option value="cooking">Cooking</option>
+                            <option value="creative-arts">Creative Arts and Design</option>
+                            <option value="general-qa">General Q&A</option>
+                            <option value="health-fitness">Health and Fitness</option>
+                            <option value="languages">Languages</option>
+                            <option value="lifestyle-hobbies">Lifestyle and Hobbies</option>
+                            <option value="personal-development">Personal Development</option>
+                            <option value="tech-dev">Technology and Development</option>
+                            <option value="test-prep">Test Preparation</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="discussion-topic" class="form-label">Your Topic/Question</label>
+                        <input type="text" class="form-control" id="discussion-topic" placeholder="Ask a question or start a discussion..." required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Start Discussion</button>
+                </form>
+            </div>
+
+            <!-- Business and Finance Forum -->
+            <div id="business-finance">
+                <h2>Business and Finance Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">How do I start investing in stocks as a beginner? <small>- <strong>johnsmith567</strong></small></div>
+                    <p>I'm new to investing and I'm interested in learning how to start investing in stocks. Any tips on where to begin?</p>
+                    <div class="reply-section">
+                        <p><strong>investorbob:</strong> I recommend starting with index funds. They're less risky for beginners.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cooking Forum -->
+            <div id="cooking">
+                <h2>Cooking Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">What’s the best way to cook a perfect steak? <small>- <strong>chefkaren</strong></small></div>
+                    <p>I'm looking for tips on how to cook a juicy, tender steak. Any advice?</p>
+                    <div class="reply-section">
+                        <p><strong>grillmaster88:</strong> I recommend searing the steak on high heat and then finishing it in the oven.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative Arts and Design Forum -->
+            <div id="creative-arts">
+                <h2>Creative Arts and Design Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">How do I improve my skills in digital illustration? <small>- <strong>artisticmike</strong></small></div>
+                    <p>I'm trying to get better at digital art. Does anyone have any tips or good resources?</p>
+                    <div class="reply-section">
+                        <p><strong>drawmore:</strong> Practice with different brushes and color palettes. Watch tutorials on YouTube!</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Q&A Forum -->
+            <div id="general-qa">
+                <h2>General Q&A Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">How can I improve my time management skills? <small>- <strong>timemaster42</strong></small></div>
+                    <p>Does anyone have tips on how to effectively manage my time and be more productive?</p>
+                    <div class="reply-section">
+                        <p><strong>productivitygeek:</strong> Use the Pomodoro technique! It really helps with focus.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health and Fitness Forum -->
+            <div id="health-fitness">
+                <h2>Health and Fitness Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">What’s the best exercise routine for weight loss? <small>- <strong>fitnhealthy</strong></small></div>
+                    <p>I’m trying to lose weight and I’m wondering what kind of exercise routine would work best for me.</p>
+                    <div class="reply-section">
+                        <p><strong>gymrat123:</strong> Focus on high-intensity interval training (HIIT) for fat loss!</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages Forum -->
+            <div id="languages">
+                <h2>Languages Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">What are the best apps to learn a new language? <small>- <strong>polyglotmike</strong></small></div>
+                    <p>Any recommendations for apps that have helped you learn a new language?</p>
+                    <div class="reply-section">
+                        <p><strong>languagelearner:</strong> Duolingo and Babbel are great for beginners.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lifestyle and Hobbies Forum -->
+            <div id="lifestyle-hobbies">
+                <h2>Lifestyle and Hobbies Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">How do I start a new hobby in photography? <small>- <strong>shutterbug99</strong></small></div>
+                    <p>I'm interested in photography but don’t know where to begin. Any tips or gear recommendations?</p>
+                    <div class="reply-section">
+                        <p><strong>cameraenthusiast:</strong> Start with a basic DSLR camera, and experiment with natural light.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Development Forum -->
+            <div id="personal-development">
+                <h2>Personal Development Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">What are the best books for personal growth? <small>- <strong>mindfulmike</strong></small></div>
+                    <p>I'm looking to read some self-improvement books. Any recommendations for personal development?</p>
+                    <div class="reply-section">
+                        <p><strong>growthmindset:</strong> "Atomic Habits" and "The Power of Now" are must-reads.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology and Development Forum -->
+            <div id="tech-dev">
+                <h2>Technology and Development Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">How do I get started with learning programming? <small>- <strong>codeguru</strong></small></div>
+                    <p>I’m interested in learning to code. What’s the best language to start with and resources?</p>
+                    <div class="reply-section">
+                        <p><strong>devnewbie:</strong> Start with Python, it’s easy for beginners and has lots of resources.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Preparation Forum -->
+            <div id="test-prep">
+                <h2>Test Preparation Discussions</h2>
+                <div class="discussion-card">
+                    <div class="discussion-title">What are some tips for acing the GRE? <small>- <strong>studytips247</strong></small></div>
+                    <p>Any advice or strategies for performing well on the GRE?</p>
+                    <div class="reply-section">
+                        <p><strong>greprep:</strong> Practice time management and focus on verbal reasoning.</p>
+                        <button class="btn btn-secondary reply-button">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End of discussion-section -->
+
+    </div> <!-- End of container -->
+
+    <!-- Footer Start -->
+    <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+        <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-light">Home</a> | <a href="courses.html" class="text-light">Courses</a> | <a href="community.html" class="text-light">Community</a> | <a href="profilePageLearner.html" class="text-light">Profile</a></p>
+        <div id="google_translate_element"></div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
