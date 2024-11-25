@@ -1,0 +1,78 @@
+.header-area {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff; 
+    z-index: 1000; 
+    padding: 15px 0; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.search-bar {
+    width: 300px; 
+}
+.custom-gap {
+    margin-right: 5px; 
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 90%; 
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    }
+.social-icon i {
+    font-size: 24px;
+    color: black;
+    }    
+.social-icon:hover i {
+    color: blue;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the top of the left and right sections */
+    gap: 20px; /* Space between the two sections */
+}
+
+.left-content {
+    flex: 1; /* Make it take up remaining space */
+    position: relative; /* Ensure independent positioning */
+}
+
+.right-content {
+    flex-shrink: 0; /* Prevent it from resizing */
+    width: 45%; /* Fixed width for the right box */
+}
+
+.profile-section img {
+    display: block;
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+.name-and-details {
+    margin-bottom: 20px; /* Spacing below the name and details */
+}
+
+.service-selection {
+    margin-top: 20px; /* Spacing above the service selection */
+}
+
+.btn-group {
+    margin-top: 20px; /* Spacing above the buttons */
+}
+
+/* Ensure the right box remains visually distinct */
+.right-content .container2 {
+    position: sticky;
+    top: 20px; /* Ensures the box stays at the top of the viewport when scrolling */
+}
+
