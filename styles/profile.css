@@ -7,13 +7,16 @@
     padding: 15px 0; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
+
 .dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
+
 .custom-gap {
     margin-right: 5px; 
 }
+
 .search-bar {
     width: 300px; 
 }
@@ -35,4 +38,12 @@
 
 .social-icon:hover i {
     color: blue;
+}
+
+.main-content {
+    background-color: #DAF5FE;
+}
+
+body {
+    background-color: #DAF5FE;
 }

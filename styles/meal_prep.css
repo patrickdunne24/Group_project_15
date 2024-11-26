@@ -41,6 +41,7 @@
     justify-content: space-between;
     align-items: flex-start; /* Align the top of the left and right sections */
     gap: 20px; /* Space between the two sections */
+    background-color: #DAF5FE;
 }
 
 .left-content {
@@ -76,3 +77,6 @@
     top: 20px; /* Ensures the box stays at the top of the viewport when scrolling */
 }
 
+body {
+    background-color: #DAF5FE;
+}

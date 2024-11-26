@@ -1,5 +1,5 @@
 .main-content{
-
+    background-color: #DAF5FE;
     padding-top: 150;
 }
 .custom-gap {
@@ -31,4 +31,8 @@
 
 .social-icon:hover i {
     color: blue;
+}
+
+body {
+    background-color: #DAF5FE;
 }

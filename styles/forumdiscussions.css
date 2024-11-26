@@ -169,4 +169,9 @@ body {
 
 .container.main-content {
     padding-top: 20px; /* Optional: Additional padding for the main content */
+    background-color: #DAF5FE;
+}
+
+body {
+    background-color: #DAF5FE;
 }

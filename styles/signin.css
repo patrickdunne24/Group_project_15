@@ -19,6 +19,7 @@
 }
 
 .main-content {
+    background-color: #DAF5FE;
     padding-top: 150px;
     font-family: "Roboto", sans-serif;
 }     
@@ -63,4 +64,8 @@ input::placeholder {
 input:focus {
     box-shadow: 0 0 5px #007BFF;
     border-color: #007BFF;
+}
+
+body {
+    background-color: #DAF5FE;
 }
