@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> <!-- Bootstrap for responsive layout -->
-    <link rel="stylesheet" href="styles/courses.css"> <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="styles/cart.css"> <!-- Custom stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts for Roboto -->
 </head>
 <body>
@@ -56,45 +56,48 @@
     </header>
 
     <!--Main Section-->
-    <div class="Cart">
-        <h1 class="section-title text-center mt-5"> Cart</h1>
-        <br>
-        <!-- Courses Container Start -->
-        <div id="coursesContainer" class="row">
-            <!-- Digital Art Basics Card Start -->
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="category-card" data-level="Beginner" data-tag="New" data-rating="4.5">
-                    <!-- Course Image -->
-                    <img src="../images/imagesForCourses/art_page/digital_art_basics.webp" alt="Digital Art Basics" class="category-image">
-                    <div class="text-container">
-                        <!-- Course Tags -->
-                        <span class="badge bg-success">New</span>
-                        <span class="badge bg-primary">Beginner</span>
-                        <!-- Course Title -->
-                        <h3 class="category-title">Digital Art Basics</h3>
-                        <!-- Course Info -->
-                        <p class="course-info">500 students &bull; 2h 30m</p>
-                        <!-- Tutor Information -->
-                        <p class="course-instructor">
-                            Tutor: <a href="#" class="contact-tutor" data-bs-toggle="modal" data-bs-target="#contactTutorModal" data-tutor="Alex Turner">Alex Turner</a>
-                        </p>
-                        <!-- Course Rating -->
-                        <div class="course-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                            <span>4.5</span>
-                        </div>
+    <div class="container-fluid m-3" id="main-container">
+        <div class="row align-items-start">
+            <div class="col-lg-8 justify-content-between">
+                <div class="border-bottom d-flex">
+                    <div class="cart-image p-3">
+                        <img class="rounded mx-auto"id="item-image"src="images\imagesForCourses\art_page\digital_art_basics.webp" alt="image of course">
                     </div>
-                    <!-- Favorite Icon -->
-                    <div class="favorite-star"><i class="fas fa-star"></i></div>
+                    <div class="float-end m-2">
+                        <p>Digital Art Basics</p>
+                    </div>
+                    <div>
+                    </div>
                 </div>
             </div>
-        <h3 class="section-title text-right mt-5"> Price</h2>
-        <p>£??.??</p>
-        <button type="button" onclick="document.document.location='checkout.html'">Proceed to checkout</button>
+
+            <div class="col-sm-3">
+                <h4>Summary</h4>
+                <div class="" id="summary">
+                    <ul class="list-group" id="cart-list">
+                        <li class="list-group-item d-flex justify-content-between" aria-current="true">
+                            <p class="">Meal Prep For Busy Schedule</p>
+                            <strong>£19.99</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between" aria-current="true">
+                            <p>Digital Art Basics</p>
+                            <strong>£12.99</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong>£32.98</strong>
+                        </li>
+                      </ul>
+
+                    <button class="btn btn-primary "type="button" id="checkout-button">Checkout</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
