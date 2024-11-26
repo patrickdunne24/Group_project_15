@@ -57,14 +57,34 @@
 
     <!--Main Section-->
     <div class="container-fluid m-3" id="main-container">
-        <div class="row align-items-start">
-            <div class="col-lg-8 justify-content-between">
-                <div class="border-bottom d-flex">
+        <h2 class="text-center">My Cart</h2>
+        <div class="row align-items-start justify-content-center">
+            <div class="col-lg-6 justify-content-between">
+                <div class="border-bottom d-flex align-items-center">
                     <div class="cart-image p-3">
                         <img class="rounded mx-auto"id="item-image"src="images\imagesForCourses\art_page\digital_art_basics.webp" alt="image of course">
                     </div>
-                    <div class="float-end m-2">
+                    <div class="m-2">
                         <p>Digital Art Basics</p>
+                        
+                    </div>
+                    <div class="ms-auto">
+                        <p>£12.99</p>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+
+                <div class="border-bottom d-flex align-items-center">
+                    <div class="cart-image p-3">
+                        <img class="rounded mx-auto"id="item-image"src="images\meal_prep.webp" alt="image of course">
+                    </div>
+                    <div class="m-2">
+                        <p>Meal Prep For Busy Schedule</p>
+                        
+                    </div>
+                    <div class="ms-auto">
+                        <p>£19.99</p>
                     </div>
                     <div>
                     </div>
@@ -74,22 +94,27 @@
             <div class="col-sm-3">
                 <h4>Summary</h4>
                 <div class="" id="summary">
+                    <form class="form-group d-flex mt-4">
+                        <input class="form-control"type="text" name="promocode" id="promocode" placeholder="Promo Code">
+                        <button class="btn btn-dark"type="submit">Apply</button>
+                    </form>
                     <ul class="list-group" id="cart-list">
-                        <li class="list-group-item d-flex justify-content-between" aria-current="true">
+                        <li class="list-group-item d-flex justify-content-between p-2" aria-current="true">
                             <p class="">Meal Prep For Busy Schedule</p>
                             <strong>£19.99</strong>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between" aria-current="true">
+                        <li class="list-group-item d-flex justify-content-between p-2" aria-current="true">
                             <p>Digital Art Basics</p>
                             <strong>£12.99</strong>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between">
+                        <li class="list-group-item d-flex justify-content-between p-2">
                             <span>Total</span>
                             <strong>£32.98</strong>
                         </li>
                       </ul>
-
-                    <button class="btn btn-primary "type="button" id="checkout-button">Checkout</button>
+                    <a href="checkout.html" target="_blank" rel="noopener noreferrer">
+                    <button class="btn btn-primary"type="button" id="checkout-button">Checkout</button>
+                    </a>
 
                 </div>
 
