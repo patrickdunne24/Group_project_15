@@ -37,9 +37,14 @@
 
 /* card styling for each of the courses */
 
+body {
+    background-color: #DAF5FE;
+}
+
 
 .main-content {
     padding-top: 150px;
+    background-color: #DAF5FE;
     font-family: "Roboto", sans-serif; 
     margin: 0 auto;
     max-width: 1200px;

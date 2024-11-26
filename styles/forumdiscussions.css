@@ -1,134 +1,142 @@
-
+/* Header */
 .header-area {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff; 
-    z-index: 1000; 
-    padding: 15px 0; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-}
-.search-bar {
-    width: 300px; 
-}
-.custom-gap {
-    margin-right: 5px; 
-}
-@media (min-width: 1200px) {
-    .container {
-        max-width: 90%; 
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    background-color: #fff;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.social-icons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding: 20px;
-    }
-.social-icon i {
-    font-size: 24px;
-    color: black;
-    }    
-.social-icon:hover i {
-    color: blue;
-}html, body {
+/* Global Layout */
+html, body {
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    padding-top: 80px; /* Ensure all content starts below the header */
 }
 
+/* Main Container */
 .container {
     display: flex;
     flex-wrap: nowrap;
-    min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
-    padding-top: 100px; /* Ensures header doesn't overlap */
-    flex-direction: column; /* Ensures the footer sticks to the bottom of the container */
-    padding-bottom: 60px; /* Added to ensure no overlap with the footer */
+    min-height: 100vh; /* Ensure the container fills the viewport height */
+    flex-direction: column;
+    padding-bottom: 60px; /* Prevent overlap with footer */
 }
 
+/* Vertical Navigation Bar */
 .content-nav {
     position: fixed;
-    top: px; /* Keeps it below the header */
+    top: 130px; /* Matches the header height (adjust this value to your actual header height) */
     left: 0;
-    width: 240px; /* Increased width for better visibility */
+    width: 240px;
+    height: calc(100vh - 100px); /* Viewport height minus header height */
     background-color: #f8f9fa;
-    padding-top: 20px;
-    padding-bottom: 20px; /* Added padding at the bottom for spacing */
-    height: calc(100vh - 120px); /* Reduced height to lift the navigation above the bottom */
+    padding-top: 10px; /* Additional padding for spacing */
+    padding-bottom: 20px;
     padding-left: 10px;
-    padding-right: 10px; /* Added padding for better layout */
+    padding-right: 10px;
     z-index: 100;
-    overflow-y: auto; /* Enables scrolling for overflowing content */
-    border-right: 1px solid #ddd; /* Optional: visual separation */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better aesthetics */
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.content-nav::-webkit-scrollbar {
-    width: 8px; /* Adjust width of the scrollbar */
-}
 
-.content-nav::-webkit-scrollbar-thumb {
-    background-color: #6c757d; /* Scrollbar thumb color */
-    border-radius: 4px; /* Rounded corners for scrollbar thumb */
-}
-
-.content-nav::-webkit-scrollbar-track {
-    background-color: #f8f9fa; /* Scrollbar track color */
-}
-
+/* Buttons in Navigation */
 .content-nav .btn-course {
     display: block;
     margin-bottom: 15px;
-    width: 100%; /* Adjusted to match new width */
-    text-align: left; /* Aligns text for a cleaner layout */
-    white-space: nowrap; /* Prevents text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
-    position: relative; /* Needed for hover effects */
-    background-color: #007bff; /* Default button background */
-    color: white; /* Button text color */
-    border: none; /* Removes border for cleaner look */
-    padding: 10px; /* Increases button padding for better accessibility */
-    border-radius: 5px; /* Rounded corners for better aesthetics */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
-    z-index: 0; /* Ensure normal stacking order */
-}
-
-/* Ensure full visibility on hover */
-.content-nav .btn-course:hover {
-    white-space: normal; /* Allows text to wrap */
-    background-color: #0056b3; /* Darker blue for better contrast */
-    color: #ffffff; /* Ensures text remains visible */
-    z-index: 200; /* Ensures the hover text appears above other elements */
-    padding: 10px; /* Keeps padding consistent */
-    position: relative;
-    overflow: visible; /* Ensures text is visible even if it extends beyond the container */
-}
-
-/* Adjust scrolling to reveal full button on hover */
-.content-nav:hover {
-    overflow-y: auto; /* Enables scrolling if content exceeds visible area */
-}
-
-.discussion-section {
-    margin-left: 260px; /* Adjusted to match the new navigation width */
-    flex-grow: 1;
-    padding: 0 30px;
-    padding-bottom: 60px; /* Prevent footer from overlapping */
-}
-
-.footer {
-    position: relative;
-    text-align: center;
     width: 100%;
-    background-color: black;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #007bff;
     color: white;
-    padding: 15px 0;
-    border-top: 2px solid white;
-    .add-discussion-form input[type="text"],
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content-nav .btn-course:hover {
+    white-space: normal;
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Main Discussion Section */
+.discussion-section {
+    margin-left: 260px; /* Offset for vertical navigation bar */
+    padding: 20px;
+    flex-grow: 1;
+    padding-bottom: 60px; /* Ensure footer doesn't overlap */
+    background-color: #f9f9f9; /* Light background for better readability */
+    border-radius: 8px; /* Rounded edges for a softer look */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Discussion Cards */
+.discussion-card {
+    margin-bottom: 30px; /* Add spacing between discussions */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better distinction */
+}
+
+.discussion-card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Discussion Title */
+.discussion-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Reply Section */
+.reply-section {
+    margin-top: 15px; /* Spacing above the reply section */
+    padding-top: 10px;
+    border-top: 1px solid #ddd; /* Separate replies from the main discussion */
+}
+
+/* Reply Button */
+.reply-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff; /* Primary blue color */
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px; /* Rounded button for better aesthetics */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reply-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Add subtle shadow on hover */
+}
+
+.reply-button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(0, 123, 255, 0.25); /* Focus ring for accessibility */
+}
+
+/* Form Styles (Unchanged) */
+.add-discussion-form input[type="text"],
 .add-discussion-form textarea,
 .add-discussion-form select {
     border: 1px solid #ddd;
@@ -139,7 +147,63 @@
 }
 
 .add-discussion-form textarea {
-    resize: vertical; /* Allow vertical resizing only */
+    resize: vertical;
+}
+
+.add-discussion-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.add-discussion-form button {
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.add-discussion-form button:hover {
+    background-color: #0056b3;
+}
+
+/* New Discussions Section */
+#new-discussions .discussion-card {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Footer */
+.footer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    border-top: 2px solid white;
+}
+
+/* Form Styles */
+.add-discussion-form input[type="text"],
+.add-discussion-form textarea,
+.add-discussion-form select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-discussion-form textarea {
+    resize: vertical;
 }
 
 .add-discussion-form label {
@@ -152,12 +216,14 @@
     margin-top: 15px;
 }
 
-}
+/* New Discussions Section */
 #new-discussions .discussion-card {
     margin-top: 20px;
 }
+
+/* Button Alignment */
 .d-flex a {
-    margin-right: 6px; /* Adds spacing between buttons */
+    margin-right: 6px;
 }
 
 .d-flex a:last-child {
@@ -169,4 +235,8 @@ body {
 
 .container.main-content {
     padding-top: 20px; /* Optional: Additional padding for the main content */
+}
+
+body {
+    background-color: #DAF5FE;
 }

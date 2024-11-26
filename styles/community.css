@@ -95,3 +95,11 @@ img {
 div.container.main-content {
     padding-top: 100px !important; /* Forces the padding to apply */
 }
+
+.main-content {
+    background-color: #DAF5FE;
+}
+
+body {
+    background-color: #DAF5FE;
+}
