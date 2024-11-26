@@ -227,27 +227,16 @@ html, body {
 }
 
 .d-flex a:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Ensures no extra margin on the last button */
+}
+body {
+    padding-top: 100px; /* Pushes all content below the fixed header */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .content-nav {
-        position: relative;
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .discussion-section {
-        margin-left: 0;
-    }
+.container.main-content {
+    padding-top: 20px; /* Optional: Additional padding for the main content */
 }
-/* Separator between sections */
-.section-separator {
-    margin: 30px 0; /* Add vertical spacing */
-    border-top: 2px solid #ddd; /* Thin line separator */
-    width: 100%;
-    height: 1px;
-    background-color: #ddd; /* Optional background color for the separator */
+
+body {
+    background-color: #DAF5FE;
 }
