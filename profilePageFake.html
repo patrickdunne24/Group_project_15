@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Our Styles-->
+    <link rel="stylesheet" href="styles/profile.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header Start -->
+    <header class="header-area">
+        <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Logo and Search Icon -->
+                <div class="d-flex align-items-center me-auto">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="" style="width: 80px;">
+                    </a>
+                    <button class="btn btn-outline-dark d-xl-none ms-2" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <form class="d-flex ms-3 search-form d-none d-xl-flex" role="search">
+                    <input class="form-control me-2 search-bar" type="search" placeholder="Search for Courses, Skills, Tutors" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+                
+                <!-- Navbar -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilePageLearner.html">Learner Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilePageTutor.html">Tutor Profile</a></li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <a href="signin.html" class="btn btn-outline-dark custom-gap">Sign In</a>
+                        <a href="signup.html" class="btn btn-dark me-2">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- welcome area and profile pic  -->
+    <div class="main-content">
+        <h1 class="text-center">Welcome to your profile!</h1>
+        <img src="images/profilePic.png" alt="Temp Profile Pic" class="mx-auto d-block rounded-3" width="242" height="236">
+        <p class="text-center">AriaBennett95</p>
+        <br>
+        <br>
+        <!-- scroll box and container to display courses -->
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="container2 p-3 my-3 col-5 bg-light text-dark spacing rounded-3">
+                    <p class="text-start fw-bold">My Courses</p>
+                    <div class="overflow-scroll" style="max-width: 620px; max-height: 180px;">
+                        <h3>Courses Currently enrolled: </h3>
+                        <br>
+                        <p><a href="courses.html">Search for Courses</a></p>
+                    </div>
+                </div>
+
+                <div class="container2 p-3 my-3 col-5 bg-light text-dark spacing rounded-3" style="max-width: 620px; max-height: 310px">
+                    <h3>User Info</h3>
+                    <br>
+                    <p>First Name: Aria</p>
+                    <p>Surname: Bennett</p>
+                    <p>Account Type: Learner</p>
+                    <p>Account Created: 26/11/2024</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <footer class="bg-black text-center py-3" style="border-top: 2px solid white;">
+        <p class="text-light">&copy; 2024 Tutord. All rights reserved | <a href="index.html" class="text-light">Home</a> | <a href="courses.html" class="text-light">Courses</a> | <a href="community.html" class="text-light">Community</a> | <a href="profilePageLearner.html" class="text-light">Profile</a></p>
+        <div id="google_translate_element"></div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" style="color:white; font-size: 24px;">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+    </footer>
+
+       <!-- JS here-->
+
+    <!-- Bootstrap JS, Popper.js, and jQuery (optional, for Bootstrap 4 compatibility) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+    <script>
+        // Close the navbar if the user clicks outside of it
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('navbarNav');
+            const toggle = document.querySelector('.navbar-toggler');
+
+            // Check if the click is outside the navbar and toggle button
+            if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
+                // Collapse the navbar if it is expanded
+                if (navbar.classList.contains('show')) {
+                    toggle.click();
+                }
+            }
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        // for google translate option on page
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+
+</body>
+</html>
